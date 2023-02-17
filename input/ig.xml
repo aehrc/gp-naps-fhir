@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="naps.fhir.au.gp"/>
+  <url value="https://www.naps.org.au/fhir/gp/ImplementationGuide/naps.fhir.au.gp"/>
+  <version value="0.0.1"/>
+  <name value="GPNAPS"/>
+  <title value="General Practitioner National Antimicrobial Prescribing Survey (NAPS)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="National Centre for Antimicrobial Stewardship"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.naps.org.au/"/>
+    </telecom>
+  </contact>
+  <description value="General Practitioner National Antimicrobial Prescribing Survey (NAPS)"/>
+  <jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="AU"/>
+		</coding>
+	</jurisdiction>
+  <packageId value="naps.fhir.au.gp"/>
+  <license value="Apache-2.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="aubaser4">
+		<uri value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"/>
+		<packageId value="hl7.fhir.au.base"/>
+		<version value="current"/>
+	</dependsOn>
+  <!--<dependsOn id="aucorer4">
+		<uri value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.core"/>
+		<packageId value="hl7.fhir.au.core"/>
+		<version value="current"/>
+	</dependsOn> -->
+  <definition>
+    <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
+      inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
+    <!--PROFILES-->
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/myobservation"/>
+      </reference>
+      <description value="Sample profile as placeholder"/>
+    </resource>
+    <!--EXAMPLES-->
+    <resource>
+      <reference>
+        <reference value="Observation/example"/>
+      </reference>
+      <name value="Observation example"/>
+      <description value="Observation example as placeholder for page"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/myobservation"/>
+    </resource>
+    <page>
+			<nameUrl value="toc.html"/>
+			<title value="Table of Contents"/>
+			<generation value="html"/>
+			<page>
+				<nameUrl value="index.html"/>
+				<title value="Home"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="guidance.html"/>
+				<title value="Guidance"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="profiles-and-extensions.html"/>
+				<title value="Profiles and Extensions"/>
+				<generation value="markdown"/>
+			</page>
+			<!--
+			<page>
+				<nameUrl value="search-parameters-and-operations.html"/>
+				<title value="Search Parameters and Operations"/>
+				<generation value="markdown"/>
+			</page>-->
+			<!--<page>
+				<nameUrl value="terminology.html"/>
+				<title value="Terminology"/>
+				<generation value="markdown"/>
+			</page>-->
+			<!--
+			<page>
+				<nameUrl value="capability-statements.html"/>
+				<title value="Capability Statements"/>
+				<generation value="markdown"/>
+			</page>-->
+			<page>
+				<nameUrl value="examples.html"/>
+				<title value="Examples"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="downloads.html"/>
+				<title value="Downloads"/>
+				<generation value="markdown"/>
+			</page>
+			<!--<page>
+				<nameUrl value="changes.html"/>
+				<title value="Change Log"/>
+				<generation value="markdown"/>
+			</page>-->
+		</page>
+    <!-- copyright year is a mandatory parameter -->
+    <parameter>
+      <code value="copyrightyear"/>
+      <value value="2023+"/>
+    </parameter>
+    <!-- releaselabel should be the ballot status for HL7-published IGs. -->
+		<parameter>
+			<code value="releaselabel"/>
+			<value value="CI Build"/>
+		</parameter>
+		<parameter>
+			<code value="path-resource"/>
+			<value value="input/resources"/>
+		</parameter>
+		<parameter>
+			<code value="path-pages"/>
+			<value value="input/intro-notes"/>
+		</parameter>
+		<parameter>
+			<code value="path-pages"/>
+			<value value="input/pagecontent"/>
+		</parameter>
+		<parameter>
+			<code value="path-pages"/>
+			<value value="input/includes"/>
+		</parameter>
+		<parameter>
+			<code value="shownav"/>
+			<value value="false"/>
+		</parameter>
+		<parameter>
+			<code value="showsource"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="apply-version"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="apply-jurisdiction"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="apply-publisher"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="show-inherited-invariants"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="excludemap"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="path-expansion-params"/>
+			<value value="../input/_resources/exp-params.json"/>
+		</parameter>
+    <!-- if you need to include resources that do not use this ig canonical namespace. -->
+		<!--<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/service-provision-conditions"/>
+		</parameter>-->
+  </definition>
+</ImplementationGuide>

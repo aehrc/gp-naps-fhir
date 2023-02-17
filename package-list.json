@@ -1,0 +1,15 @@
+{
+ "package-id" : "naps.fhir.au.gp",
+ "title" : "General Practitioner National Antimicrobial Prescribing Survey (NAPS)", 
+ "canonical" : "https://www.naps.org.au/fhir/gp", 
+ "introduction" : "General Practitioner National Antimicrobial Prescribing Survey (NAPS)",
+ "list" : [
+    {
+  "version" : "current",
+  "desc" : "Continuous Integration Build (latest in version control)",
+  "path" : "http://build.fhir.org/ig/aehrc/sample-aehrc-ig",
+  "status" : "ci-build",
+  "current" : true
+ }
+]
+}
