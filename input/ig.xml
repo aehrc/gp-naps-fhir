@@ -29,29 +29,84 @@
 		<packageId value="hl7.fhir.au.base"/>
 		<version value="current"/>
 	</dependsOn>
-  <!--<dependsOn id="aucorer4">
-		<uri value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.core"/>
-		<packageId value="hl7.fhir.au.core"/>
-		<version value="current"/>
-	</dependsOn> -->
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
     <!--PROFILES-->
-    <resource>
+	<resource>
       <reference>
-        <reference value="StructureDefinition/myobservation"/>
+        <reference value="StructureDefinition/gp-naps-alcoholstatus"/>
       </reference>
-      <description value="Sample profile as placeholder"/>
+      <description value="GP NAPS Alcohol Status"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/gp-naps-allergyintolerance"/>
+      </reference>
+      <description value="GP NAPS AllergyIntolerance"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/gp-naps-bodyweight"/>
+      </reference>
+      <description value="GP NAPS Body Weight"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/gp-naps-encounter"/>
+      </reference>
+      <description value="GP NAPS Encounter"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/gp-naps-medication"/>
+      </reference>
+      <description value="GP NAPS Medication"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/gp-naps-medicationrequest"/>
+      </reference>
+      <description value="GP NAPS MedicationRequest"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/gp-naps-medicationstatement"/>
+      </reference>
+      <description value="GP NAPS MedicationStatement"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/gp-naps-organization"/>
+      </reference>
+      <description value="GP NAPS Organization"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/gp-naps-patient"/>
+      </reference>
+      <description value="GP NAPS Patient"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/gp-naps-practitionerrole"/>
+      </reference>
+      <description value="GP NAPS"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="StructureDefinition/gp-naps-smokingstatus"/>
+      </reference>
+      <description value="GP NAPS Smoking Status"/>
     </resource>
     <!--EXAMPLES-->
     <resource>
       <reference>
-        <reference value="Observation/example"/>
+        <reference value="Bundle/naps-1"/>
       </reference>
-      <name value="Observation example"/>
-      <description value="Observation example as placeholder for page"/>
-      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/myobservation"/>
+      <name value="Bundle GP NAPS 1"/>
+      <description value="Bundle GP NAPS 1"/>
+      <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
     </resource>
     <page>
 			<nameUrl value="toc.html"/>

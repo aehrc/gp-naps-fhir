@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+    <!--
+    SYSTEM INTERACTION REQUIREMENTS
+    Is every upload considered a unique patient entry? 
+    If so no need for client-side or server-side resolution of Patient record only a unique bundle entry id to link content for an upload commit
+-->
+    <id value="naps-1"/>
+    <type value="collection"/>
+    <timestamp value="2023-03-28T11:01:00+10:00"/>
+    <entry>
+        <fullUrl value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
+        <resource>
+            <Patient>
+                <meta>
+                    <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-patient"/>
+                </meta>
+                <!-- Patient_Ethnicity -->
+                <extension url="http://hl7.org.au/fhir/StructureDefinition/indigenous-status">
+                    <valueCoding>
+                        <system value="https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"/>
+                        <code value="4"/>
+                        <display value="Neither Aboriginal nor Torres Strait Islander origin"/>
+                    </valueCoding>
+                </extension>
+                <!-- Gender -->
+                <gender value="male"/>
+                <!-- DoB to derive Age -->
+                <birthDate value="1973"/>
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:fc3a8c62-1b01-4971-8e46-5c5fdd1c6082"/>
+        <resource>
+            <Organization>
+                <meta>
+                    <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-organization"/>
+                </meta>
+                <type>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="394761003"/>
+                    </coding>
+                    <text value="GP practice"/>
+                </type>
+                <!-- General Practice Name -->
+                <name value="Sample General Practice"/>
+                <address>
+                    <!-- State/Territory -->
+                    <state value="QLD"/>
+                    <!-- Postcode -->
+                    <postalCode value="4655"/>
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:949133cb-de9a-44a7-b3d3-bd0e9d9d2faf"/>
+        <resource>
+            <Encounter>
+                <meta>
+                    <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-encounter"/>
+                </meta>
+                <status value="finished"/>
+                <class>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+                    <code value="AMB"/>
+                    <display value="ambulatory"/>
+                </class>
+                <subject>
+                    <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
+                </subject>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+                            <code value="PPRF"/>
+                            <display value="primary performer"/>
+                        </coding>
+                    </type>
+                    <individual>
+                        <reference value="urn:uuid:6455b6e5-e7bc-4f04-be8d-899bc3d2fe22"/>
+                    </individual>
+                </participant>
+                <!-- Date of visit -->
+                <period>
+                    <end value="2022-02-10"/>
+                </period>
+                <serviceProvider>
+                    <reference value="urn:uuid:fc3a8c62-1b01-4971-8e46-5c5fdd1c6082"/>
+                </serviceProvider>
+            </Encounter>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:6455b6e5-e7bc-4f04-be8d-899bc3d2fe22"/>
+        <resource>
+            <PractitionerRole>
+                <meta>
+                    <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-practitionerrole"/>
+                </meta>
+                <practitioner>
+                    <!-- Prescriber Number -->
+                    <identifier>
+                        <type>
+                            <coding>
+                                <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+                                <code value="PRES"/>
+                                <display value="Prescriber Number"/>
+                            </coding>
+                            <text value="Prescriber Number"/>
+                        </type>
+                        <system value="http://ns.electronichealth.net.au/id/medicare-prescriber-number"/>
+                        <value value="453221"/>
+                    </identifier>
+                </practitioner>
+                <organization>
+                    <reference value="urn:uuid:fc3a8c62-1b01-4971-8e46-5c5fdd1c6082"/>
+                </organization>
+                <!-- Specialty -->
+                <specialty>
+                    <text value="General Practitioner"/>
+                </specialty>
+            </PractitionerRole>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:3694f804-44b4-408e-8fd6-e18ff38e2506"/>
+        <resource>
+            <Observation>
+                <meta>
+                    <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-bodyweight"/>
+                </meta>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                        <code value="vital-signs"/>
+                        <display value="Vital Signs"/>
+                    </coding>
+                    <text value="Vital Signs"/>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="29463-7"/>
+                        <display value="Body weight"/>
+                    </coding>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="27113001"/>
+                    </coding>
+                    <text value="weight"/>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
+                </subject>
+                <!-- Weight -->
+                <valueQuantity>
+                    <value value="75"/>
+                    <unit value="kg"/>
+                    <system value="http://unitsofmeasure.org"/>
+                    <code value="kg"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:02a6a3de-a088-4845-9055-39dac68dfb6f"/>
+        <resource>
+            <AllergyIntolerance>
+                <meta>
+                    <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-allergyintolerance"/>
+                </meta>
+                <clinicalStatus>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+                        <code value="active"/>
+                        <display value="Active"/>
+                    </coding>
+                </clinicalStatus>
+                <verificationStatus>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+                        <code value="unconfirmed"/>
+                        <display value="Unconfirmed"/>
+                    </coding>
+                </verificationStatus>
+                <!-- Allergies to Antimicrobial -->
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="11981000168107"/>
+                        <display value="Bactrim"/>
+                    </coding>
+                </code>
+                <patient>
+                    <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
+                </patient>
+                <reaction>
+                    <substance>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="11981000168107"/>
+                            <display value="Bactrim"/>
+                        </coding>
+                    </substance>
+                    <!-- Nature of Allergies -->
+                    <manifestation>
+                        <text value="Rash"/>
+                    </manifestation>
+                </reaction>
+            </AllergyIntolerance>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:cf5c5aee-f4c7-4660-bc5f-b515c41f6168"/>
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <meta>
+                    <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-smokingstatus"/>
+                </meta>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                        <code value="social-history"/>
+                        <display value="Social History"/>
+                    </coding>
+                    <text value="Social History"/>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="266918002" />
+                    </coding>
+                    <text value="Smoking status"/>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
+                </subject>
+                <!-- Patient_Other substance use_Status > Patient_Smoking_Status -->
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="8517006"/>
+                        <display value="Ex-smoker"/>
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:3fcaf325-ba30-4d10-85b1-6464c4d31a42"/>
+        <resource>
+            <Observation>
+                <meta>
+                    <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-alcoholstatus"/>
+                </meta>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                        <code value="social-history"/>
+                        <display value="Social History"/>
+                    </coding>
+                    <text value="Social History"/>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="160573003" />
+                    </coding>
+                    <text value="Alcohol status"/>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
+                </subject>
+                <!-- Patient_Other substance use_Status > Alcohol -->
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="228276006"/>
+                        <display value="Occasional drinker"/>
+                    </coding>
+                    <text value="Occasional drinker"/>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:ec0fd1d9-1a96-44a9-ae2e-e6df954108a8"/>
+        <resource>
+            <MedicationRequest>
+                <meta>
+                    <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
+                </meta>
+                <status value="active"/>
+                <intent value="instance-order"/>
+                <medicationReference>
+                    <reference value="urn:uuid:fc682365-a035-4450-bbbb-a369b6cfaeb6"/>
+                </medicationReference>
+                <subject>
+                    <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
+                </subject>
+                <!-- Date of prescription -->
+                <authoredOn value="2022-02-10"/>
+                <!-- Prescriber -->
+                <requester>
+                        <reference value="urn:uuid:6455b6e5-e7bc-4f04-be8d-899bc3d2fe22"/>
+                </requester>
+                <!-- Clinical Notes if Reason_for_prescription -->
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="36971009"/>
+                        <display value="Sinusitis"/>
+                    </coding>
+                    <text value="Sinusitis"/>
+                </reasonCode>
+                <!-- Clinical Notes if other -->
+                <note>
+                    <text value="Clinical notes if not the reason for prescribing or are narrative"/>
+                </note>
+                <dosageInstruction>
+                    <text value="1 tab Twice a day before meals"/>
+                    <!-- Route -->
+                    <route>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="26643006"/>
+                            <display value="Oral route"/>
+                        </coding>
+                    </route>
+                    <doseAndRate>
+                        <doseQuantity>
+                            <!-- Dose -->
+                            <value value="1"/>
+                            <!-- Dose unit -->
+                            <unit value="TAB"/>
+                            <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+                            <code value="TAB"/>
+                        </doseQuantity>
+                    </doseAndRate>
+                </dosageInstruction>
+                <dispenseRequest>
+                    <!-- Repeats -->
+                    <numberOfRepeatsAllowed value="1"/>
+                    <!-- Quantity -->
+                    <quantity>
+                        <value value="10"/>
+                        <unit value="Tab"/>
+                    </quantity>
+                </dispenseRequest>
+            </MedicationRequest>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:da0fe578-21d7-4f97-9f3e-de193d6da997"/>
+        <resource>
+            <MedicationStatement xmlns="http://hl7.org/fhir">
+                <meta>
+                    <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationstatement"/>
+                </meta>
+                <!-- Long_Term -->
+                <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-long-term">
+                    <valueBoolean value="false"/>
+                </extension>
+                <status value="intended"/>
+                <medicationReference>
+                    <reference value="urn:uuid:fc682365-a035-4450-bbbb-a369b6cfaeb6"/>
+                </medicationReference>
+                <subject>
+                    <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
+                </subject>
+                <!-- Date of prescription -->
+                <dateAsserted value="2022-02-10"/>
+                <derivedFrom>
+                    <reference value="urn:uuid:ec0fd1d9-1a96-44a9-ae2e-e6df954108a8"/>
+                </derivedFrom>
+            </MedicationStatement>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:fc682365-a035-4450-bbbb-a369b6cfaeb6"/>
+        <resource>
+            <Medication>
+                <meta>
+                    <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medication"/>
+                </meta>
+                <!-- Antimicrobial -->
+                <code>
+                    <text value="Rulide 150mg Tablet"/>
+                </code>
+                <!-- Dose form -->
+                <form>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="154011000036109"/>
+                        <display value="tablet"/>
+                    </coding>
+                    <text value="Tablet"/>
+                </form>
+            </Medication>
+        </resource>
+    </entry>
+</Bundle>
