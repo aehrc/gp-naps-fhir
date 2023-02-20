@@ -35,12 +35,6 @@
     <!--PROFILES-->
 	<resource>
       <reference>
-        <reference value="StructureDefinition/gp-naps-alcoholstatus"/>
-      </reference>
-      <description value="GP NAPS Alcohol Status"/>
-    </resource>
-	<resource>
-      <reference>
         <reference value="StructureDefinition/gp-naps-allergyintolerance"/>
       </reference>
       <description value="GP NAPS AllergyIntolerance"/>

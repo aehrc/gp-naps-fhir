@@ -58,18 +58,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="AllergyIntolerance.recorder">
-      <path value="AllergyIntolerance.recorder"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-practitionerrole"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="AllergyIntolerance.note">
-      <path value="AllergyIntolerance.note"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="AllergyIntolerance.reaction">
       <path value="AllergyIntolerance.reaction"/>
       <mustSupport value="true"/>

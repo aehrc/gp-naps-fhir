@@ -108,9 +108,5 @@
       <path value="MedicationStatement.reasonCode"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MedicationStatement.note">
-      <path value="MedicationStatement.note"/>
-      <mustSupport value="true"/>
-    </element>
   </differential>
 </StructureDefinition>
