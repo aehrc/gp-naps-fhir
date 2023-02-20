@@ -4,7 +4,13 @@ This implementation guide is provided to support the use of HL7<sup>&reg;</sup> 
 TBD Insert purpose and scope of the General Practitioner National Antimicrobial Prescribing Survey (NAPS) here.
 
 ### Questions
-TBD
+- Cardinality
+- Coding
+- Date of documentation for obs - is that date of extract or date obs was taken?
+- Patient Identifying No SYSTEM INTERACTION REQUIREMENTS
+    - Is every upload considered a unique patient entry? If so no need for client-side or server-side resolution of Patient record only a unique bundle entry id to link content for an upload commit
+    - or is every patient the scope implying the source GP system needs a way to resolve the GP NAPS system's resolveable id - implications across multiple systems for patient records
+      - this is a pathway to only loosely de-identified data
 
 ### How to Read this Guide
 

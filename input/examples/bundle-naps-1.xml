@@ -45,7 +45,7 @@
                     <text value="GP practice"/>
                 </type>
                 <!-- General Practice Name -->
-                <name value="Sample General Practice"/>
+                <name value="GP NAPS pseudonym"/>
                 <address>
                     <!-- State/Territory -->
                     <state value="QLD"/>
