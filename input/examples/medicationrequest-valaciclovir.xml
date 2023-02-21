@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="valaciclovir"/>
+  <meta>
+    <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
+  </meta>
+  <status value="unknown"/>
+  <intent value="order"/>
+  <!-- Antimicrobial -->
+  <medicationCodeableConcept>
+    <text value="Valaciclovir"/>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/naps-patient-2"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/naps-encounter-2"/>
+  </encounter>
+  <!-- Date of visit -->
+  <!-- Date of visit -->
+  <authoredOn value="2018-07-15"/>
+  <requester>
+    <reference value="PractitionerRole/naps-practitionerrole-3"/>
+  </requester>
+  <!-- Indication for Antimicrobial -->
+  <reasonCode>
+    <text value="Infected prosthetic joint or bone prosthesis"/>
+  </reasonCode>
+  <dosageInstruction>
+    <!-- Frequency 24 hourly, Once a day (d) -->
+    <timing>
+      <repeat>
+        <frequency value="1"/>
+        <period value="24"/>
+        <periodUnit value="h"/>
+      </repeat>
+    </timing>
+    <!-- Route -->
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="26643006"/>
+        <display value="Oral route"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <!-- Dose -->
+        <value value="500"/>
+        <!-- Dose unit -->
+        <unit value="mL"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mL"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+</MedicationRequest>

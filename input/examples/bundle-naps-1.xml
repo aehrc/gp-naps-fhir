@@ -332,14 +332,17 @@
                     <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
                 </meta>
                 <status value="unknown"/>
-                <intent value="instance-order"/>
+                <intent value="order"/>
                 <medicationReference>
                     <reference value="urn:uuid:fc682365-a035-4450-bbbb-a369b6cfaeb6"/>
                 </medicationReference>
                 <subject>
                     <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
                 </subject>
-                <!-- Date of prescription -->
+                <encounter>
+                    <reference value="urn:uuid:949133cb-de9a-44a7-b3d3-bd0e9d9d2faf"/>
+                </encounter>
+                <!-- Date of visit -->
                 <authoredOn value="2022-02-10"/>
                 <!-- Prescriber -->
                 <requester>
@@ -356,6 +359,12 @@
                 </reasonCode>
                 <dosageInstruction>
                     <text value="1 tab Twice a day before meals"/>
+                    <!-- Frequency -->
+                    <timing>
+                        <code>
+                            <text value="Twice a day before meals"/>
+                        </code>
+                    </timing>
                     <!-- Route -->
                     <route>
                         <coding>
@@ -376,6 +385,10 @@
                     </doseAndRate>
                 </dosageInstruction>
                 <dispenseRequest>
+                    <!-- Date of prescription -->
+                    <validityPeriod>
+                        <start value="2022-02-10"/>
+                    </validityPeriod>
                     <!-- Repeats -->
                     <numberOfRepeatsAllowed value="1"/>
                     <!-- Quantity -->

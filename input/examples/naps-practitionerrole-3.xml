@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PractitionerRole xmlns="http://hl7.org/fhir">
+    <id value="naps-practitionerrole-3"/>
+    <meta>
+        <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-practitionerrole"/>
+    </meta>
+    <practitioner>
+        <!-- Prescriber Number converted to Prescriber Id managed by local system within their registration segment -->
+        <identifier>
+            <system value="https://www.naps.org.au/id/practice-scoped/14125/prescriber/"/>
+            <value value="10"/>
+        </identifier>
+    </practitioner>
+    <organization>
+        <reference value="Organization/naps-organization-2"/>
+    </organization>
+    <!-- Specialty -->
+    <specialty>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="394593009"/>
+        </coding>
+        <text value="Oncology"/>
+    </specialty>
+</PractitionerRole>
+        

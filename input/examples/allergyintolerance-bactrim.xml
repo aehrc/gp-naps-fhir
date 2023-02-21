@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+    <id value="bactrim"/>
+    <meta>
+        <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-allergyintolerance"/>
+    </meta>
+    <clinicalStatus>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+        </coding>
+    </clinicalStatus>
+    <verificationStatus>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+            <code value="unconfirmed"/>
+            <display value="Unconfirmed"/>
+        </coding>
+    </verificationStatus>
+    <!-- Allergies to Antimicrobial -->
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="11981000168107"/>
+            <display value="Bactrim"/>
+        </coding>
+    </code>
+    <patient>
+        <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
+    </patient>
+    <reaction>
+        <substance>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="11981000168107"/>
+                <display value="Bactrim"/>
+            </coding>
+        </substance>
+        <!-- Nature of Allergies -->
+        <manifestation>
+            <text value="Rash"/>
+        </manifestation>
+    </reaction>
+</AllergyIntolerance>

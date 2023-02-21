@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Encounter xmlns="http://hl7.org/fhir">
+    <id value="naps-encounter-1"/>
+    <meta>
+        <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-encounter"/>
+    </meta>
+    <status value="finished"/>
+    <class>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+        <code value="AMB"/>
+        <display value="ambulatory"/>
+    </class>
+    <subject>
+        <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
+    </subject>
+    <participant>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+                <code value="PPRF"/>
+                <display value="primary performer"/>
+            </coding>
+        </type>
+        <individual>
+            <reference value="PractitionerRole/naps-practitionerrole-1"/>
+        </individual>
+    </participant>
+    <!-- Date of visit -->
+    <period>
+        <end value="2022-02-10T16:00:00+10:00"/>
+    </period>
+    <serviceProvider>
+        <reference value="Organization/naps-organization-1"/>
+    </serviceProvider>
+</Encounter>
+        

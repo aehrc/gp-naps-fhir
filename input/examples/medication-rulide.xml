@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Medication xmlns="http://hl7.org/fhir">
+    <id value="rulide"/>
+    <meta>
+        <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medication"/>
+    </meta>
+    <!-- Antimicrobial -->
+    <code>
+        <text value="Rulide 150mg Tablet"/>
+    </code>
+    <!-- Dose form -->
+    <form>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="154011000036109"/>
+            <display value="tablet"/>
+        </coding>
+        <text value="Tablet"/>
+    </form>
+</Medication>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationRequest xmlns="http://hl7.org/fhir">
+    <id value="rulide"/>
+    <meta>
+        <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
+    </meta>
+    <status value="unknown"/>
+    <intent value="order"/>
+    <medicationReference>
+        <reference value="Medication/rulide"/>
+    </medicationReference>
+    <subject>
+        <reference value="Patient/naps-patient-1"/>
+    </subject>
+    <encounter>
+        <reference value="Encounter/naps-encounter-1"/>
+    </encounter>
+    <!-- Date of visit -->
+    <authoredOn value="2022-02-10"/>
+    <!-- Prescriber -->
+    <requester>
+        <reference value="PractitionerRole/naps-practitionerrole-1"/>
+    </requester>
+    <!-- Indication for Antimicrobial -->
+    <reasonCode>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="36971009"/>
+            <display value="Sinusitis"/>
+        </coding>
+        <text value="Sinusitis"/>
+    </reasonCode>
+    <dosageInstruction>
+        <text value="1 tab Twice a day before meals"/>
+        <!-- Frequency -->
+        <timing>
+            <code>
+                <text value="Twice a day before meals"/>
+            </code>
+        </timing>
+        <!-- Route -->
+        <route>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="26643006"/>
+                <display value="Oral route"/>
+            </coding>
+        </route>
+        <doseAndRate>
+            <doseQuantity>
+                <!-- Dose -->
+                <value value="1"/>
+                <!-- Dose unit -->
+                <unit value="TAB"/>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+                <code value="TAB"/>
+            </doseQuantity>
+        </doseAndRate>
+    </dosageInstruction>
+    <dispenseRequest>
+        <!-- Date of prescription -->
+        <validityPeriod>
+            <start value="2022-02-10"/>
+        </validityPeriod>
+        <!-- Repeats -->
+        <numberOfRepeatsAllowed value="1"/>
+        <!-- Quantity -->
+        <quantity>
+            <value value="10"/>
+            <unit value="Tab"/>
+        </quantity>
+    </dispenseRequest>
+</MedicationRequest>

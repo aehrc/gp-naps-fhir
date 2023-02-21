@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="naps-organization-2"/>
+    <meta>
+        <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-organization"/>
+    </meta>
+    <!-- Practice name converted to NAPS practice registration identifier -->
+    <identifier>
+        <system value="https://www.naps.org.au/id/practice"/>
+        <value value="3235555"/>
+    </identifier>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="394761003"/>
+        </coding>
+        <text value="GP practice"/>
+    </type>
+    <address>
+        <!-- State/Territory -->
+        <state value="VIC"/>
+        <!-- Postcode -->
+        <postalCode value="3002"/>
+    </address>
+</Organization>
+        

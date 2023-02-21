@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
+    <id value="naps-patient-3"/>
+    <meta>
+        <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-patient"/>
+    </meta>
+    <!-- Patient_Ethnicity -->
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/indigenous-status">
+        <valueCoding>
+            <system value="https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"/>
+            <code value="3"/>
+            <display value="Both Aboriginal and Torres Strait Islander origin"/>
+        </valueCoding>
+    </extension>
+    <!-- Gender -->
+    <gender value="female"/>
+    <!-- DoB to derive Age -->
+    <birthDate value="2012-10-10"/>
+</Patient>
+        

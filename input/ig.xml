@@ -94,6 +94,14 @@
       <description value="GP NAPS Smoking Status"/>
     </resource>
     <!--EXAMPLES-->
+	<resource>
+      <reference>
+        <reference value="AllergyIntolerance/bactrim"/>
+      </reference>
+      <name value="AllergyIntolerance Bactrim"/>
+      <description value="AllergyIntolerance Bactrim"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-allergyintolerance"/>
+    </resource>
     <resource>
       <reference>
         <reference value="Bundle/naps-1"/>
@@ -101,6 +109,150 @@
       <name value="Bundle GP NAPS 1"/>
       <description value="Bundle GP NAPS 1"/>
       <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="Encounter/naps-encounter-1"/>
+      </reference>
+      <name value="Encounter GP NAPS 1"/>
+      <description value="Encounter GP NAPS 1"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-encounter"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="Encounter/naps-encounter-2"/>
+      </reference>
+      <name value="Encounter GP NAPS 2"/>
+      <description value="Encounter GP NAPS 2"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-encounter"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="Medication/rulide"/>
+      </reference>
+      <name value="Medication rulide w strength"/>
+      <description value="Medication rulide w strength"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medication"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="MedicationRequest/rulide"/>
+      </reference>
+      <name value="GP NAPS prescription rulide - referencing a Medication resource"/>
+      <description value="GP NAPS prescription rulide"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="MedicationRequest/valaciclovir"/>
+      </reference>
+      <name value="GP NAPS prescription valaciclovir"/>
+      <description value="GP NAPS prescription valaciclovir"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="MedicationStatement/rulide"/>
+      </reference>
+      <name value="MedicationStatement derived from GP NAPS prescription rulide"/>
+      <description value="MedicationStatement derived from GP NAPS prescription rulide to indicate long term"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="Patient/naps-patient-1"/>
+      </reference>
+      <name value="Patient GP NAPS 1"/>
+      <description value="Patient GP NAPS 1"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-patient"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="Patient/naps-patient-2"/>
+      </reference>
+      <name value="Patient GP NAPS 2"/>
+      <description value="Patient GP NAPS 2"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-patient"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="Patient/naps-patient-3"/>
+      </reference>
+      <name value="Patient GP NAPS 3"/>
+      <description value="Patient GP NAPS 3"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-patient"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="PractitionerRole/naps-practitionerrole-1"/>
+      </reference>
+      <name value="PractitionerRole GP NAPS 1"/>
+      <description value="PractitionerRole GP NAPS 1"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-practitionerrole"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="PractitionerRole/naps-practitionerrole-2"/>
+      </reference>
+      <name value="PractitionerRole GP NAPS 2"/>
+      <description value="PractitionerRole GP NAPS 2"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-practitionerrole"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="PractitionerRole/naps-practitionerrole-3"/>
+      </reference>
+      <name value="PractitionerRole GP NAPS 3"/>
+      <description value="PractitionerRole GP NAPS 3"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-practitionerrole"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="Observation/naps-crcl-1"/>
+      </reference>
+      <name value="CrCl (creatinine clearance)"/>
+      <description value="CrCl (creatinine clearance)"/>
+      <exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="Observation/naps-egfr-1"/>
+      </reference>
+      <name value="eGFR (estimated glomerular filtration rate)"/>
+      <description value="eGFR (estimated glomerular filtration rate)"/>
+      <exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="Observation/naps-smokingstatus-1"/>
+      </reference>
+      <name value="Smoking Status"/>
+      <description value="Smoking Status"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-smokingstatus"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="Observation/naps-weight-1"/>
+      </reference>
+      <name value="Body Weight"/>
+      <description value="Body Weight"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-bodyweight"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="Organization/naps-organization-1"/>
+      </reference>
+      <name value="Organization GP NAPS 1"/>
+      <description value="GP NAPS 1"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-organization"/>
+    </resource>
+	<resource>
+      <reference>
+        <reference value="Organization/naps-organization-2"/>
+      </reference>
+      <name value="Organization GP NAPS 2"/>
+      <description value="GP NAPS 2"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-organization"/>
     </resource>
     <page>
 			<nameUrl value="toc.html"/>

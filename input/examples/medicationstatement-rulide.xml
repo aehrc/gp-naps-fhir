@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationStatement xmlns="http://hl7.org/fhir">
+    <id value="rulide"/>
+    <meta>
+        <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationstatement"/>
+    </meta>
+    <!-- Long_Term -->
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-long-term">
+        <valueBoolean value="false"/>
+    </extension>
+    <!-- Derived from MedicationRequest that is instance-order - Medication -->
+    <status value="intended"/>
+    <!-- Derived from MedicationRequest - Medication -->
+    <medicationReference>
+        <reference value="Medication/rulide"/>
+    </medicationReference>
+    <!-- Derived from MedicationRequest - Subject -->
+    <subject>
+        <reference value="Patient/naps-patient-1"/>
+    </subject>
+    <!-- Derived from MedicationRequest - Date Prescribed -->
+    <dateAsserted value="2022-02-10"/>
+    <derivedFrom>
+        <reference value="MedicationRequest/rulide"/>
+    </derivedFrom>
+    <!-- Derived from MedicationRequest - Indication for Antimicrobial -->
+    <reasonCode>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="36971009"/>
+            <display value="Sinusitis"/>
+        </coding>
+        <text value="Sinusitis"/>
+    </reasonCode>
+    <!-- Derived from MedicationRequest - Dosage -->
+    <dosage>
+        <text value="1 tab Twice a day before meals"/>
+        <!-- Route -->
+        <route>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="26643006"/>
+                <display value="Oral route"/>
+            </coding>
+        </route>
+        <doseAndRate>
+            <doseQuantity>
+                <!-- Dose -->
+                <value value="1"/>
+                <!-- Dose unit -->
+                <unit value="TAB"/>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+                <code value="TAB"/>
+            </doseQuantity>
+        </doseAndRate>
+    </dosage>
+</MedicationStatement>

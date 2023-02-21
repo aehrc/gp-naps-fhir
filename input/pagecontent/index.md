@@ -22,9 +22,9 @@ TBD Insert purpose and scope of the General Practitioner National Antimicrobial 
 ~~~
 - Prescriber ID - not desired however - feedback cross-enterprise? cross-setting? geographical boundaries? local system?
   - under assumption of feedback from a single practice installation then only need is local resolution
-    - i.e. same practitioner in acute session won't get feedback taking into account both settings
+    - i.e. same practitioner at a different site (different GP system) won't get feedback taking into account both settings
     - essentially need practice registration with identifier system that is made unique using the practice registration qualifier
-    - NAPS system and local system interaction to resolve and re-identify to provide feedback...? Could have local system registration known to NAPS system, but not provider - local system knows how to assign and resolve providers.
+    - NAPS system and local system interaction to resolve and re-identify to provide feedback...? NAPS has the local system registered, and the local system maintains an internal mapping for re-identification. The local system does not share that map. 
 ~~~
 ...
     "identifier" : [
@@ -40,8 +40,16 @@ TBD Insert purpose and scope of the General Practitioner National Antimicrobial 
       - this is a pathway to re-identified data
       - if requiring that each system can uniquely match their patient against NAPS patient, resolve, and update then solution architecture needs significant consideration
       - what is the feedback / research qs being addressed?
-
-What are the interactions this data set & FHIR IG supports? is it soley reporting? 
+~~~
+...
+    "identifier" : [
+      {
+      "system" : "https://www.naps.org.au/id/practice-scoped/14124/patient",
+      "value" : "209"
+    },
+...
+~~~
+What are the interactions this data set & FHIR IG supports? 
 
 ### How to Read this Guide
 
