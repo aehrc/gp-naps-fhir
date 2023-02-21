@@ -4,6 +4,11 @@
     <meta>
         <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-organization"/>
     </meta>
+    <!-- Practice name converted to UUID as NAPS practice identifier -->
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7"/>
+    </identifier>
     <type>
         <coding>
             <system value="http://snomed.info/sct"/>
