@@ -70,5 +70,9 @@
       <path value="AllergyIntolerance.reaction.manifestation"/>
       <mustSupport value="true"/>
     </element>
+    <element id="AllergyIntolerance.reaction.severity">
+      <path value="AllergyIntolerance.reaction.severity"/>
+      <mustSupport value="true"/>
+    </element>
   </differential>
 </StructureDefinition>
