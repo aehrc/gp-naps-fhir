@@ -156,7 +156,7 @@
       </reference>
       <name value="MedicationStatement derived from GP NAPS prescription rulide"/>
       <description value="MedicationStatement derived from GP NAPS prescription rulide to indicate long term"/>
-      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationstatement"/>
     </resource>
 	<resource>
       <reference>
