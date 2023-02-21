@@ -14,12 +14,6 @@
   <differential>
     <element id="Organization">
       <path value="Organization"/>
-    </element>
-        <element id="Organization.identifier">
-      <path value="Organization.identifier"/>
-      <min value="1"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Organization.type">
       <path value="Organization.type"/>
       <patternCodeableConcept>

@@ -15,14 +15,6 @@
     <element id="PractitionerRole">
       <path value="PractitionerRole"/>
     </element>
-    <element id="PractitionerRole.practitioner">
-      <path value="PractitionerRole.practitioner"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="PractitionerRole.practitioner.identifier">
-      <path value="PractitionerRole.practitioner.identifier"/>
-      <min value="1"/>
-    </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization"/>
       <min value="1"/>

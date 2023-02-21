@@ -4,11 +4,6 @@
     <meta>
         <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-organization"/>
     </meta>
-    <!-- Practice name converted to NAPS practice registration identifier -->
-    <identifier>
-        <system value="https://www.naps.org.au/id/practice"/>
-        <value value="3235555"/>
-    </identifier>
     <type>
         <coding>
             <system value="http://snomed.info/sct"/>
