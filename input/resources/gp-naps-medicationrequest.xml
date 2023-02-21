@@ -124,6 +124,10 @@
       <path value="MedicationRequest.dispenseRequest"/>
       <mustSupport value="true"/>
     </element>
+    <element id="MedicationRequest.dispenseRequest.validityPeriod">
+      <path value="MedicationRequest.dispenseRequest.validityPeriod"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
       <path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed"/>
       <mustSupport value="true"/>
