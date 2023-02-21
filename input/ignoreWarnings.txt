@@ -5,3 +5,20 @@ The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+
+
+# Ignore warnings due to unavailable terminology server
+Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1' is unknown so the code cannot be validated
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1 not found by validator
