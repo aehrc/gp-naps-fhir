@@ -311,6 +311,30 @@
       <description value="GP NAPS 2"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-organization"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="Specimen/eyeswab"/>
+      </reference>
+      <name value="Eye swab"/>
+      <description value="Eye swab with collection date"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-specimen"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Specimen/nasoswab"/>
+      </reference>
+      <name value="Nasopharyngeal swab"/>
+      <description value="Nasopharyngeal swab coded with SNOMED and with collection date"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-specimen"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Specimen/urine"/>
+      </reference>
+      <name value="Urine specimen"/>
+      <description value="Urine specimen coded with SNOMED and with collection date"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-specimen"/>
+    </resource>
     <page>
       <nameUrl value="toc.html"/>
       <title value="Table of Contents"/>

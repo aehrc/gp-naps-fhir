@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Specimen xmlns="http://hl7.org/fhir">
+    <id value="eyeswab"/>
+    <meta>
+        <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-specimen"/>
+    </meta>
+    <type>
+        <text value="Eye swab"/>
+    </type>
+    <subject>
+        <reference value="Patient/naps-patient-3"/>
+    </subject>
+    <collection>
+        <collectedDateTime value="2023-02-27"/>
+    </collection>
+</Specimen>

@@ -9,6 +9,12 @@ This guide does not cover:
 - data access and API
 - data privacy and security controls
 
+### Design queries to resolve
+- Is Encounter relevant? Currently holds no unique GP NAPS data - recommend removal of Encounter profile unless required to generate unique Encounter IDs on ingestion of data submission
+- Microbiology - only tests with results? or include tests ordered?
+- Microbiology - is specimen type required in addition to test ordered? - recommend removal of Specimen profile unless required for specimen type
+- Microbiology - collection date - can this be supported as a Period? or only date time?
+
 ### How to Read this Guide
 
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
