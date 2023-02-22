@@ -111,8 +111,24 @@
       <reference>
         <reference value="AllergyIntolerance/bactrim"/>
       </reference>
-      <name value="AllergyIntolerance Bactrim"/>
-      <description value="AllergyIntolerance Bactrim"/>
+      <name value="Bactrim"/>
+      <description value="Bactrim"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-allergyintolerance"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="AllergyIntolerance/penicillin"/>
+      </reference>
+      <name value="Penicillin with severity"/>
+      <description value="Penicillin with severity"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-allergyintolerance"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="AllergyIntolerance/noneknown"/>
+      </reference>
+      <name value="No known allergy"/>
+      <description value="No known allergy"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-allergyintolerance"/>
     </resource>
     <resource>

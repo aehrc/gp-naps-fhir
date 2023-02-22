@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AllergyIntolerance xmlns="http://hl7.org/fhir">
-    <id value="bactrim"/>
+    <id value="noneknown"/>
     <meta>
         <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-allergyintolerance"/>
     </meta>
@@ -18,29 +18,14 @@
             <display value="Unconfirmed"/>
         </coding>
     </verificationStatus>
-    <category value="medication"/>
-    <!-- Allergies to Antimicrobial -->
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="11981000168107"/>
-            <display value="Bactrim"/>
+            <code value="716186003"/>
+            <display value="No known allergy"/>
         </coding>
     </code>
     <patient>
-        <reference value="Patient/naps-patient-1"/>
+        <reference value="Patient/naps-patient-3"/>
     </patient>
-    <reaction>
-        <substance>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="11981000168107"/>
-                <display value="Bactrim"/>
-            </coding>
-        </substance>
-        <!-- Nature of Allergies -->
-        <manifestation>
-            <text value="Rash"/>
-        </manifestation>
-    </reaction>
 </AllergyIntolerance>
