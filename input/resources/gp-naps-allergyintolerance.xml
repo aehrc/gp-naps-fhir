@@ -64,6 +64,7 @@
     </element>
     <element id="AllergyIntolerance.reaction.substance">
       <path value="AllergyIntolerance.reaction.substance"/>
+      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="AllergyIntolerance.reaction.manifestation">
