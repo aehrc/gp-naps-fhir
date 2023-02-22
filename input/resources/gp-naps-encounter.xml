@@ -34,10 +34,23 @@
     </element>
     <element id="Encounter.participant">
       <path value="Encounter.participant"/>
+      <slicing>
+        <discriminator>
+          <type value="pattern"/>
+          <path value="type"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Encounter.participant.type">
+    <element id="Encounter.participant:prescriber">
+      <path value="Encounter.participant" />
+      <sliceName value="prescriber"/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element id="Encounter.participant:prescriber.type">
       <path value="Encounter.participant.type"/>
       <patternCodeableConcept>
         <coding>
@@ -45,9 +58,10 @@
           <code value="PPRF"/>
         </coding>
       </patternCodeableConcept>
-      <mustSupport value="true"/>
+      <min value="1"/>
+      <max value="1"/>
     </element>
-    <element id="Encounter.participant.individual">
+    <element id="Encounter.participant:prescriber.individual">
       <path value="Encounter.participant.individual"/>
       <type>
         <code value="Reference"/>
