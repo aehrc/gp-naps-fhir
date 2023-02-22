@@ -83,6 +83,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/gp-naps-pathologyresult"/>
+      </reference>
+      <description value="GP NAPS Patient"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/gp-naps-patient"/>
       </reference>
       <description value="GP NAPS Patient"/>
@@ -92,6 +98,12 @@
         <reference value="StructureDefinition/gp-naps-practitionerrole"/>
       </reference>
       <description value="GP NAPS"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/gp-naps-specimen"/>
+      </reference>
+      <description value="GP NAPS Specimen"/>
     </resource>
     <resource>
       <reference>
