@@ -11,7 +11,7 @@
         <display value="ambulatory"/>
     </class>
     <subject>
-        <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
+        <reference value="Patient/naps-patient-2"/>
     </subject>
     <participant>
         <type>
