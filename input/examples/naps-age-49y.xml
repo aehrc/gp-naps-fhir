@@ -18,9 +18,9 @@
     <effectiveDateTime value="2022-02-10"/>
     <!-- Patient age in years -->
     <valueQuantity>
-    <value value="49"/>
-    <unit value="year"/>
-    <system value="http://unitsofmeasure.org"/>
-    <code value="a"/>
-  </valueQuantity>
+        <value value="49"/>
+        <unit value="year"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="a"/>
+    </valueQuantity>
 </Observation>

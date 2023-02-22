@@ -1,15 +1,13 @@
 ### Introduction
-This implementation guide is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context for the General Practitioner National Antimicrobial Prescribing Survey (NAPS).
+This implementation guide is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> to submit data for the General Practitioner (GP) National Antimicrobial Prescribing Survey (NAPS).
 
-TBD Insert purpose and scope of the General Practitioner National Antimicrobial Prescribing Survey (NAPS) here.
+The [NAPS](https://www.naps.org.au) is coordinated by a multi-disciplinary team at the [National Centre for Antimicrobial Stewardship](https://www.ncas-australia.org/), and is delivered by the [Guidance Group](https://www.ncas-australia.org/Guidance_Group). This survey has been in use since 2011 and has already helped hundreds of Australian Health Care Facilities to assess their antimicrobial prescribing practice. It provides valuable information on the utilisation of antimicrobials within Australia.
 
-### Questions
-- Cardinality - any multiplicities?
-- Data access mechanism - maybe Bulk Data Access IG - bulk export by system? by patient? qualified by time period?
-- Encounter ID should not be needed - systems have date time to differentiate from source system; bundle should have generated technical ids for an entry. NAPS can assign the internal DB id on ingestion.
-- Prescription ID not needed for a source system to differentiate - can be assigned on consumption by NAPs; otherwise needs to be some sort of generator within practices that should still be stripped on ingestion by and replaced by internal DB id on ingestion.
+This is a working specification developed in conjunction with the ongoing design of the GP NAPS data set. The content published in this guide is intended to be a base set of requirements for FHIR implementation of the data set that should be refined as design of the GP NAPS data set is matured. 
 
-What are the interactions this data set & FHIR IG supports? 
+This guide does not cover:
+- data access and API
+- data privacy and security controls
 
 ### How to Read this Guide
 
@@ -19,6 +17,7 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Guidance](guidance.html): This page provides guidance.
 - [FHIR Artefacts](artifacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This set of pages describes the profiles and extensions that are defined in this guide to represent Australian local concepts using FHIR. Each profile page includes a narrative description, guidance, and formal definition. Although the guidance typically focuses on the profiled elements and seeks to provide a ‘how-to’ guide when representing concepts, it may also may focus on un-profiled elements to aid with implementation.
+  - [Terminology](terminology.html): This set of pages lists the value sets and code systems defined in this guide.
 - [Examples](examples.html): This page lists all the examples used in this guide.
 - [Downloads](downloads.html): This page provides links to downloadable artefacts including the FHIR NPM package.
 
