@@ -47,7 +47,12 @@
     <element id="Organization.address">
       <path value="Organization.address"/>
       <min value="1"/>
+      <max value="1"/>
       <mustSupport value="true"/>
+    </element>
+    <element id="Organization.address.state">
+      <path value="Organization.address.state"/>
+      <min value="1"/>
     </element>
     <element id="Organization.address.postalCode">
       <path value="Organization.address.postalCode"/>
@@ -60,7 +65,6 @@
         <expression value="matches('^[0-9]{4}$')" />
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-address" />
       </constraint>
-      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>
