@@ -14,7 +14,5 @@
     </extension>
     <!-- Gender -->
     <gender value="female"/>
-    <!-- DoB to derive Age -->
-    <birthDate value="2012-10-10"/>
 </Patient>
         

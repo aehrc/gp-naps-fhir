@@ -16,7 +16,10 @@
   <encounter>
     <reference value="Encounter/naps-encounter-2"/>
   </encounter>
-  <!-- Date of visit -->
+  <!-- Age -->
+  <supportingInformation>
+    <reference value="Observation/naps-age-12-18months"/>
+  </supportingInformation>
   <!-- Date of visit -->
   <authoredOn value="2018-07-15"/>
   <requester>

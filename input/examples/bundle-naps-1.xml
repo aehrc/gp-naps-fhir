@@ -25,8 +25,6 @@
                 </extension>
                 <!-- Gender -->
                 <gender value="male"/>
-                <!-- DoB to derive Age -->
-                <birthDate value="1973"/>
             </Patient>
         </resource>
     </entry>
@@ -249,6 +247,35 @@
         </resource>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:40147379-8a48-4d48-8ca9-620f17cb7802"/>
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <meta>
+                    <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-age"/>
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="424144002" />
+                    </coding>
+                    <text value="Age"/>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
+                </subject>
+                <effectiveDateTime value="2022-02-10"/>
+                <!-- Patient age in years -->
+                <valueQuantity>
+                    <value value="49"/>
+                    <unit value="year"/>
+                    <system value="http://unitsofmeasure.org"/>
+                    <code value="a"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
         <fullUrl value="urn:uuid:8c138f68-b23d-4673-9fcb-4b030082b768"/>
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -342,6 +369,10 @@
                 <encounter>
                     <reference value="urn:uuid:949133cb-de9a-44a7-b3d3-bd0e9d9d2faf"/>
                 </encounter>
+                <!-- Age -->
+                <supportingInformation>
+                    <reference value="urn:uuid:40147379-8a48-4d48-8ca9-620f17cb7802"/>
+                </supportingInformation>
                 <!-- Date of visit -->
                 <authoredOn value="2022-02-10"/>
                 <!-- Prescriber -->

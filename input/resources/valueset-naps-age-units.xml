@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="naps-age-units"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <url value="https://www.naps.org.au/fhir/gp/ValueSet/naps-age-units"/>
+  <name value="NAPSAgeUnits"/>
+  <title value="NAPS Age Units"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <description value="The NAPS Age Units value set includes values from UCUM (Unified Code for Units of Measure) for the supported age units (days, weeks, months, years)."/>
+  <copyright value="The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright © 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved."/>
+  <compose> 
+    <include> 
+      <system value="http://unitsofmeasure.org"/> 
+      <concept> 
+        <code value="d"/> 
+        <display value="days"/> 
+      </concept> 
+      <concept> 
+        <code value="wk"/> 
+        <display value="weeks"/> 
+      </concept> 
+      <concept> 
+        <code value="mo"/> 
+        <display value="months"/> 
+      </concept> 
+      <concept> 
+        <code value="a"/> 
+        <display value="years"/> 
+      </concept> 
+    </include> 
+  </compose>
+</ValueSet>

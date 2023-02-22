@@ -15,6 +15,10 @@
     <encounter>
         <reference value="Encounter/naps-encounter-1"/>
     </encounter>
+    <!-- Age -->
+    <supportingInformation>
+        <reference value="Observation/naps-age-49y"/>
+    </supportingInformation>
     <!-- Date of visit -->
     <authoredOn value="2022-02-10"/>
     <!-- Prescriber -->

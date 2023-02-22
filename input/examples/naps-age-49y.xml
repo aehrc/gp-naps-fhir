@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="naps-age-49y"/>
+    <meta>
+        <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-age"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="424144002" />
+        </coding>
+        <text value="Age"/>
+    </code>
+    <subject>
+        <reference value="Patient/naps-patient-1"/>
+    </subject>
+    <effectiveDateTime value="2022-02-10"/>
+    <!-- Patient age in years -->
+    <valueQuantity>
+    <value value="49"/>
+    <unit value="year"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="a"/>
+  </valueQuantity>
+</Observation>

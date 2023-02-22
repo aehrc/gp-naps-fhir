@@ -89,6 +89,18 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="MedicationRequest.supportingInformation:age">
+      <path value="MedicationRequest.supportingInformation"/>
+      <sliceName value="age"/>
+      <short value="Observation of age"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-age"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MedicationRequest.authoredOn">
       <path value="MedicationRequest.authoredOn"/>
       <min value="1"/>

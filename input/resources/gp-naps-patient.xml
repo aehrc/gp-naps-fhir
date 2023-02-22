@@ -25,10 +25,5 @@
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Patient.birthDate">
-      <path value="Patient.birthDate"/>
-      <min value="1"/>
-      <mustSupport value="true"/>
-    </element>
   </differential>
 </StructureDefinition>
