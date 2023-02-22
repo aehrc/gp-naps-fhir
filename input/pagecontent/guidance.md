@@ -1,13 +1,27 @@
 ### Intent of this Implementation Guide
 TBD
 
-### Forming pseudonym identifiers in FHIR
+### Pseudonym identifiers (de-identification and re-identification)
+This implementation guide does not prescribe or recommend an approach to de-identification and re-identification of data for NAPS. 
 
-In support of feedback to practices and prescribers, a General Practice (system) could register with the NAPS system and gain a unique identifier known only to the NAPS system and that practice system that is used as the key for their data set. This identifier would not be shared with other registered practice systems or be allowed to be used for other purposes than the provision of feedback under NAPS agreements and the implemented data privacy and security controls.
+Within defined data security and privacy controls, a GP NAPS implementation may support the collection of data and provision of feedback to practices and prescribers through de-identification and re-identification protocols implemented by GP NAPS system and a local practice system participating in GP NAPS.
 
-This identifier would be applied as part of data extraction and export from the general practice system to the NAPS system.
+De-identification and re-identification may make use of a practice-scoped set of identifiers in a number of different ways including making use of hashing, local maps, etc. FHIR, and use of Bulk Data Access, can support most (if not all) approaches.
 
-For example
+In this implementation guide to support example resources demonstrating the clinical data set, this implementation guide mandates Organization.identifier, and includes two simple types of identifiers:
+- a UUID with no information on assigner, e.g.
+~~~
+{
+  "resourceType" : "Organization",
+    ...
+    "identifier" : [
+      {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7"
+    },
+...
+~~~
+- an identifier within a NAPS naming system, e.g.
 ~~~
 {
   "resourceType" : "Organization",
@@ -20,26 +34,16 @@ For example
 ...
 ~~~
 
-A unique Prescriber ID for use in NAPS exports would be assigned by the General Practice system and be stored in a map in the local system. NAPS has the local system registered, and the local system maintains an internal mapping for re-identification. The local system does not share that map or used for other purposes than the provision of feedback under NAPS agreements and the implemented data privacy and security controls. 
+    with locally managed prescriber identifier the local system (but not NAPS) would use to re-identify
 
-The Prescriber ID is unique only within that General Practice and when forming the identifier in FHIR it is made globally unique by using the General Practice system 
+    ~~~
+    ...
+        "identifier" : [
+          {
+          "system" : "https://www.naps.org.au/id/practice-scoped/14124/prescriber",
+          "value" : "3235209"
+        },
+    ...
+    ~~~
 
-~~~
-...
-    "identifier" : [
-      {
-      "system" : "https://www.naps.org.au/id/practice-scoped/14124/prescriber",
-      "value" : "3235209"
-    },
-...
-
-The same pattern could be undertaken for a patient, if needed, if appropriate and approved as part of the data privacy and security assessments. 
-~~~
-...
-    "identifier" : [
-      {
-      "system" : "https://www.naps.org.au/id/practice-scoped/14124/patient",
-      "value" : "209"
-    },
-...
-~~~
+These identifiers do not attempt to implement data security and privacy controls, the GP NAPS system may implement a different approach.
