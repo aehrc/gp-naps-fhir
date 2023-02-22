@@ -25,6 +25,7 @@
     </element>
     <element id="MedicationRequest.intent">
       <path value="MedicationRequest.intent"/>
+      <fixedCode value="order" />
       <mustSupport value="true"/>
     </element>
     <element id="MedicationRequest.medication[x]">
