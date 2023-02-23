@@ -112,9 +112,21 @@
       <description value="GP NAPS Smoking Status"/>
     </resource>
     <!--TERMINOLOGY-->
+    <resource>
+			<reference>
+				<reference value="CodeSystem/naps-script-authority-type"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
 		<resource>
 			<reference>
 				<reference value="ValueSet/naps-age-units"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+    <resource>
+			<reference>
+				<reference value="ValueSet/naps-script-authority-type"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>

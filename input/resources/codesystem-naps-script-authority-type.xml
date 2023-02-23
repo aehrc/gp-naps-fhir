@@ -1,0 +1,40 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="naps-script-authority-type" />
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
+    </meta>
+    <url value="https://www.naps.org.au/fhir/gp/CodeSystem/naps-script-authority-type" />
+    <name value="PrescriptionAuthorityType"/>
+    <title value="Prescription Authority Type"/>
+    <status value="active" />
+    <experimental value="false"/>
+    <description value="The Prescription Authority Type code system defines the concepts for prescription authority type under Pharmaceutical Benefits Scheme (PBS) prescribing requirements." />
+    <caseSensitive value="true" />
+    <compositional value="false" />
+    <versionNeeded value="false" />
+    <content value="complete" />
+    <concept>
+        <code value="pbs" />
+        <display value="Pharmaceutical Benefits Scheme" />
+        <property>
+            <code value="status"/>
+            <valueCode value="active"/>
+        </property>
+    </concept>
+    <concept>
+        <code value="priv" />
+        <display value="Private" />
+        <property>
+            <code value="status"/>
+            <valueCode value="active"/>
+        </property>
+    </concept>
+    <concept>
+        <code value="auth" />
+        <display value="Authority" />
+        <property>
+            <code value="status"/>
+            <valueCode value="active"/>
+        </property>
+    </concept>
+</CodeSystem>

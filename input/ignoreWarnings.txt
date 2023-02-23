@@ -52,3 +52,4 @@ The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/specimen
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/specimen-collection-procedure-1 on element Specimen.collection.method could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/body-site-1 on element Specimen.collection.bodySite could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1 on element Observation.component.code could not be resolved
+The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1 on element Encounter.hospitalization.dischargeDisposition could not be resolved
