@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="who-act"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <url value="https://www.naps.org.au/fhir/gp/ValueSet/who-act"/>
+  <name value="WHOATC"/>
+  <title value="WHO ATC"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <description value="The NAPS Age Units value set includes values from UCUM (Unified Code for Units of Measure) for the supported age units (days, weeks, months, years)."/>
+  <copyright value="This artifact includes content from Anatomical Therapeutic Chemical (ATC) classification system. ATC codes are copyright World Health Organization (WHO) Collaborating Centre for Drug Statistics Methodology. Terms &amp; Conditions in https://www.whocc.no/use_of_atc_ddd/"/>
+  <compose>
+    <include>
+      <system value="http://www.whocc.no/atc"/>
+    </include>
+  </compose>
+</ValueSet>

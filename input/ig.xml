@@ -118,6 +118,12 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
+    <resource>
+			<reference>
+				<reference value="ValueSet/who-act"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
     <!--EXAMPLES-->
     <resource>
       <reference>

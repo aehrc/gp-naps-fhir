@@ -66,6 +66,20 @@
       <sliceName value="amt"/>
       <mustSupport value="true"/>
     </element>
+    <element id="MedicationRequest.medication[x]:medicationCodeableConcept.coding:who-atc">
+      <path value="MedicationRequest.medication[x].coding"/>
+      <sliceName value="who-atc"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://www.naps.org.au/fhir/gp/ValueSet/who-act"/>
+      </binding>
+    </element>
+    <element id="MedicationRequest.medication[x]:medicationCodeableConcept.coding:who-atc.system">
+      <path value="MedicationRequest.medication[x].coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://www.whocc.no/atc"/>
+    </element>
     <element id="MedicationRequest.medication[x]:medicationReference">
       <path value="MedicationRequest.medication[x]"/>
       <sliceName value="medicationReference"/>
