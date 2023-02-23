@@ -1,6 +1,12 @@
 ### GP NAPS Data Submission
 Fields to be passed to NAPS from general practice patient record management software systems in use in Australia.
 
+The table below identifies the element that is the primary semantic match for that field to support ingestion of the data submission into the NAPS system. A complete FHIR data submission will populate a clinical or administrative concept in each FHIR resource that concept is applicable, for example:
+- each FHIR resource will declare it's context including the patient
+- date of visit is primarily matched to MedicationRequest.authoredOn but may also be populated in a MedicationStatement, Encounter, and Specimen resource.
+
+For guidance on a complete FHIR data submission see the section [Complete FHIR data submission](guidance.html#complete-fhir-data-submission).
+
 |GP NAPs data field|GP NAPS Profile|FHIR element|
 |---|----|---|---|
 |State/Territory|[GP NAPS Organization](StructureDefinition-gp-naps-organization.html)|Organization.address.state|
@@ -10,7 +16,7 @@ Fields to be passed to NAPS from general practice patient record management soft
 |Prescription type|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.extension:TBD|
 |Date of visit|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.authoredOn|
 |Date of prescription|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.dispenseRequest.validityPeriod.start|
-|Antimicrobial|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.medicationCodeableConcept OR Medication.code|
+|Antimicrobial|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.medicationCodeableConcept XOR Medication.code|
 |Route|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.dosageInstruction.route|
 |Dose|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.value|
 |Dose unit|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.unit|
@@ -41,6 +47,44 @@ Fields to be passed to NAPS from general practice patient record management soft
 |Prescriber Number|Not in scope of IG|Part of data access, privacy, and security.|
 {:.grid}
 
+
+### Complete FHIR data submission
+The table below provides guidance to developers implementing data export from a general practice system in forming the GP NAPS data submission.
+
+|GP NAPs data field|Primary FHIR element|Derived FHIR element|
+|---|----|---|
+|State/Territory|Organization.address.state|N/A|
+|Postcode|Organization.address.postalCode|N/A|
+|Gender|Patient.gender|N/A|
+|Indigenous Status |Patient.extension:indigenousStatus|N/A|
+|Prescription type|MedicationRequest.extension:TBD|N/A|
+|Date of visit|MedicationRequest.authoredOn|Encounter.period.end and MedicationStatement.dateAsserted|
+|Date of prescription|MedicationRequest.dispenseRequest.validityPeriod.start|N/A|
+|Antimicrobial|MedicationRequest.medicationCodeableConcept XOR Medication.code|If use of MedicationRequest.medicationCodeableConcept then MedicationStatement.medicationCodeableConcept|
+|Route|MedicationRequest.dosageInstruction.route|MedicationStatement.dosage.route|
+|Dose|MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.value|MedicationStatement.dosage.doseAndRate.doseQuantity.value|
+|Dose unit|MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.unit|MedicationStatement.dosage.doseAndRate.doseQuantity.unit|
+|Dose form|Medication.form|N/A|
+|Frequency|MedicationRequest.dosageInstruction.timing|MedicationStatement.dosage.timing|
+|Quantity|MedicationRequest.dispenseRequest.quantity|N/A|
+|Repeats|MedicationRequest.dispenseRequest.numberOfRepeatsAllowed|N/A|
+|Indication for Antimicrobial|MedicationRequest.reasonCode|MedicationStatement.reasonCode|
+|Long_Term|MedicationStatement.extension:longTerm|N/A|
+|Allergies to Antimicrobial|AllergyIntolerance.code|AllergyIntolerance.reaction.substance|
+|Nature of Allergies|AllergyIntolerance.reaction.manifestation|N/A|
+|Severity|AllergyIntolerance.reaction.severity|N/A|
+|Specialty|PractitionerRole.specialty|N/A|
+|Age|Observation.valueQuantity.value XOR Observation.valueRange.low.value and Observation.valueRange.high.value|N/A|
+|AgeUnit|Observation.valueQuantity.unit XOR Observation.valueRange.low.unit and Observation.valueRange.high.unit|N/A|
+|Weight|Observation.valueQuantity|N/A|
+|eGFR|Observation.valueQuantity|N/A|
+|CrCl|Observation.valueQuantity|N/A|
+|Microbiology collected|Specimen.type|N/A|
+|Microbiology date collected|Observation.effectiveDateTime XOR Observation.effectivePeriod|Specimen.collection.collected[x]|
+|Microbiology collected test|Observation.code|N/A|
+|Microbiology collected result|Observation.value[x]|N/A|
+|smoking status |Observation.valueCodeableConcept|N/A|
+{:.grid}
 
 
 ### Pseudonym identifiers (de-identification and re-identification)

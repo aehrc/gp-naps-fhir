@@ -22,6 +22,7 @@
     </element>
     <element id="MedicationStatement.status">
       <path value="MedicationStatement.status"/>
+      <fixedCode value="intended" />
       <mustSupport value="true"/>
     </element>
     <element id="MedicationStatement.medication[x]">

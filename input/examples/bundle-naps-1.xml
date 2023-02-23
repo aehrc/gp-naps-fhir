@@ -452,7 +452,7 @@
                 <subject>
                     <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
                 </subject>
-                <!-- Derived from MedicationRequest - Date Prescribed -->
+                <!-- Derived from MedicationRequest - Date of Visit -->
                 <dateAsserted value="2022-02-10"/>
                 <derivedFrom>
                     <reference value="urn:uuid:ec0fd1d9-1a96-44a9-ae2e-e6df954108a8"/>

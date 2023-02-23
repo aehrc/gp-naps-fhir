@@ -74,6 +74,10 @@
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
+    <element id="Encounter.period.end">
+      <path value="Encounter.period.end"/>
+      <min value="1"/>
+    </element>
     <element id="Encounter.reasonCode">
       <path value="Encounter.reasonCode"/>
       <mustSupport value="true"/>
