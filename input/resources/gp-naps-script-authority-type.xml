@@ -5,7 +5,8 @@
     <name value="PrescriptionAuthorityType"/>
     <title value="Prescription Authority Type"/>
     <status value="draft"/>
-    <description value="This extension applies to the [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html) resource and and is used to indicate the type of prescription authority under Pharmaceutical Benefits Scheme (PBS) prescribing requirements."/>
+    <experimental value="true"/>
+    <description value="This extension applies to the [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html) resource and and is used to indicate the type of prescription authority under Pharmaceutical Benefits Scheme (PBS) prescribing requirements.&#xa;&#xa;This extension will be submitted to HL7 Australia for inclusion in the [HL7 AU Base Implementation Guide](http://build.fhir.org/ig/hl7au/au-fhir-base/). If accepted, this GP NAPS content will be replaced with HL7 Australia content."/>
     <fhirVersion value="4.0.1"/>
     <kind value="complex-type"/>
     <abstract value="false"/>

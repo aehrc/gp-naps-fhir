@@ -9,7 +9,7 @@
     <title value="Prescription Authority Type"/>
     <status value="draft"/>
     <experimental value="false"/>
-    <description value="The Prescription Authority Type value set includes values that indicate the prescription authority type under Pharmaceutical Benefits Scheme (PBS) prescribing requirements."/>
+    <description value="The Prescription Authority Type value set includes values that indicate the prescription authority type under Pharmaceutical Benefits Scheme (PBS) prescribing requirements.&#xa;&#xa;This value set will be submitted to HL7 Australia for inclusion in the [HL7 AU Base Implementation Guide](http://build.fhir.org/ig/hl7au/au-fhir-base/). If accepted, this GP NAPS content will be replaced with HL7 Australia content."/>
     <compose>
     <include>
       <system value="https://www.naps.org.au/fhir/gp/CodeSystem/naps-script-authority-type"/>

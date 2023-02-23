@@ -3,7 +3,7 @@ Fields to be passed to NAPS from general practice patient record management soft
 
 The table below identifies the element that is the primary semantic match for that field to support ingestion of the data submission into the NAPS system. A complete FHIR data submission will populate a clinical or administrative concept in each FHIR resource that concept is applicable, for example:
 - each FHIR resource will declare it's context including the patient
-- date of visit is primarily matched to MedicationRequest.authoredOn but may also be populated in a MedicationStatement, Encounter, and Specimen resource.
+- date of visit is primarily matched to MedicationRequest.authoredOn but may also be populated in  MedicationStatement, Encounter, Specimen and Observation resources.
 
 For guidance on a complete FHIR data submission see the section [Complete FHIR data submission](guidance.html#complete-fhir-data-submission).
 
@@ -58,7 +58,7 @@ The table below provides guidance to developers implementing data export from a 
 |Gender|Patient.gender|N/A|
 |Indigenous Status |Patient.extension:indigenousStatus|N/A|
 |Prescription type|MedicationRequest.extension:TBD|N/A|
-|Date of visit|MedicationRequest.authoredOn|Encounter.period.end and MedicationStatement.dateAsserted|
+|Date of visit|MedicationRequest.authoredOn|Encounter.period.end and MedicationStatement.dateAsserted and Observation(Age).effectivedateTime|
 |Date of prescription|MedicationRequest.dispenseRequest.validityPeriod.start|N/A|
 |Antimicrobial|MedicationRequest.medicationCodeableConcept XOR Medication.code|If use of MedicationRequest.medicationCodeableConcept then MedicationStatement.medicationCodeableConcept|
 |Route|MedicationRequest.dosageInstruction.route|MedicationStatement.dosage.route|

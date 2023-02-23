@@ -8,7 +8,7 @@
     <title value="Prescription Authority Type"/>
     <status value="active" />
     <experimental value="false"/>
-    <description value="The Prescription Authority Type code system defines the concepts for prescription authority type under Pharmaceutical Benefits Scheme (PBS) prescribing requirements." />
+    <description value="The Prescription Authority Type code system defines the concepts for prescription authority type under Pharmaceutical Benefits Scheme (PBS) prescribing requirements.&#xa;&#xa;This code system will be submitted to HL7 Australia for inclusion in the [HL7 AU Base Implementation Guide](http://build.fhir.org/ig/hl7au/au-fhir-base/). If accepted, this GP NAPS content will be replaced with HL7 Australia content." />
     <caseSensitive value="true" />
     <compositional value="false" />
     <versionNeeded value="false" />
