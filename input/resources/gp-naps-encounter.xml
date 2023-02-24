@@ -17,6 +17,7 @@
     </element>
     <element id="Encounter.status">
       <path value="Encounter.status"/>
+      <fixedCode value="finished" />
       <mustSupport value="true"/>
     </element>
     <element id="Encounter.class">
@@ -88,6 +89,7 @@
         <code value="Reference"/>
         <targetProfile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-organization"/>
       </type>
+      <min value="1"/>
       <mustSupport value="true"/>
     </element>
   </differential>

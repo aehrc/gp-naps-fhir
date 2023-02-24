@@ -30,8 +30,6 @@
     <version value="4.1.0"/>
   </dependsOn>
   <definition>
-    <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
-      inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
     <!--PROFILES-->
     <resource>
       <reference>

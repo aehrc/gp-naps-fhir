@@ -56,6 +56,7 @@
     </element>
     <element id="Medication.form">
       <path value="Medication.form"/>
+      <min value="1" />
       <mustSupport value="true"/>
     </element>
   </differential>

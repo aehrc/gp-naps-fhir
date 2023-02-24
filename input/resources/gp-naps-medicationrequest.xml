@@ -15,12 +15,9 @@
     <element id="MedicationRequest">
       <path value="MedicationRequest"/>
     </element>
-    <element id="MedicationRequest.identifier">
-      <path value="MedicationRequest.identifier"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="MedicationRequest.status">
       <path value="MedicationRequest.status"/>
+      <short value="active | completed | unknown"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationRequest.intent">

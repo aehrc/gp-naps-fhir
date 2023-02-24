@@ -58,8 +58,8 @@ The table below provides guidance to developers implementing data export from a 
 |Gender|Patient.gender|N/A|
 |Indigenous Status |Patient.extension:indigenousStatus|N/A|
 |Prescription type|MedicationRequest.extension:TBD|N/A|
-|Date of visit|MedicationRequest.authoredOn|Encounter.period.end and MedicationStatement.dateAsserted and Observation(Age).effectivedateTime|
-|Date of prescription|MedicationRequest.dispenseRequest.validityPeriod.start|N/A|
+|Date of visit|MedicationRequest.authoredOn|Encounter.period.end and MedicationStatement.dateAsserted and Observation(Age).effectiveDateTime|
+|Date of prescription|MedicationRequest.dispenseRequest.validityPeriod.start|MedicationStatement.effectivePeriod.start|
 |Antimicrobial|MedicationRequest.medicationCodeableConcept XOR Medication.code|If use of MedicationRequest.medicationCodeableConcept then MedicationStatement.medicationCodeableConcept|
 |Route|MedicationRequest.dosageInstruction.route|MedicationStatement.dosage.route|
 |Dose|MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.value|MedicationStatement.dosage.doseAndRate.doseQuantity.value|

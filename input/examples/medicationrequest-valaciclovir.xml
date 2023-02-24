@@ -12,7 +12,7 @@
             <display value="Private"/>
         </valueCoding>
     </extension>
-  <status value="unknown"/>
+  <status value="cancelled"/>
   <intent value="order"/>
   <!-- Antimicrobial -->
   <medicationCodeableConcept>

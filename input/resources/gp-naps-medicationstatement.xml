@@ -18,6 +18,7 @@
     <element id="MedicationStatement.extension:longTerm">
       <path value="MedicationStatement.extension" />
       <sliceName value="longTerm" />
+      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationStatement.status">
@@ -34,11 +35,13 @@
         </discriminator>
         <rules value="closed"/>
       </slicing>
+      <comment value="Derived from MedicationRequest.medication[x]"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept">
       <path value="MedicationStatement.medication[x]"/>
       <sliceName value="medicationCodeableConcept"/>
+      <comment value="Derived from MedicationRequest.medication[x]:medicationCodeableConcept"/>
       <type>
         <code value="CodeableConcept"/>
       </type>
@@ -80,6 +83,7 @@
     <element id="MedicationStatement.medication[x]:medicationReference">
       <path value="MedicationStatement.medication[x]"/>
       <sliceName value="medicationReference"/>
+      <comment value="Derived from MedicationRequest.medication[x]:medicationReference"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medication"/>
@@ -96,22 +100,32 @@
     </element>
     <element id="MedicationStatement.context">
       <path value="MedicationStatement.context"/>
+      <comment value="Derived from MedicationRequest.encounter"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-encounter"/>
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MedicationStatement.effective[x]">
-      <path value="MedicationStatement.effective[x]"/>
+    <element id="MedicationStatement.effectivePeriod">
+      <path value="MedicationStatement.effectivePeriod"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.effectivePeriod.start">
+      <path value="MedicationStatement.effectivePeriod.start"/>
+      <comment value="Derived from MedicationRequest.dispenseRequest.validityPeriod.start"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationStatement.dateAsserted">
       <path value="MedicationStatement.dateAsserted"/>
+      <comment value="Derived from MedicationRequest.authoredOn"/>
+      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationStatement.derivedFrom">
       <path value="MedicationStatement.derivedFrom"/>
+      <min value="1"/>
+      <max value="1"/>
       <type>
         <code value="Reference"/>
         <targetProfile
@@ -121,6 +135,12 @@
     </element>
     <element id="MedicationStatement.reasonCode">
       <path value="MedicationStatement.reasonCode"/>
+      <comment value="Derived from MedicationRequest.reasonCode"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.dosage">
+      <path value="MedicationStatement.dosage"/>
+      <comment value="Derived from MedicationRequest.dosageInstruction"/>
       <mustSupport value="true"/>
     </element>
   </differential>
