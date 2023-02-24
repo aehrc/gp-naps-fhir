@@ -13,7 +13,7 @@ For guidance on a complete FHIR data submission see the section [Complete FHIR d
 |Postcode|[GP NAPS Organization](StructureDefinition-gp-naps-organization.html)|Organization.address.postalCode|
 |Gender|[GP NAPS Patient](StructureDefinition-gp-naps-patient.html)|Patient.gender|
 |Indigenous Status |[GP NAPS Patient](StructureDefinition-gp-naps-patient.html)|Patient.extension:indigenousStatus|
-|Prescription type|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.extension:TBD|
+|Prescription type|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.extension:scriptAuthorityType|
 |Date of visit|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.authoredOn|
 |Date of prescription|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.dispenseRequest.validityPeriod.start|
 |Antimicrobial|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.medicationCodeableConcept XOR Medication.code|
@@ -86,6 +86,126 @@ The table below provides guidance to developers implementing data export from a 
 |smoking status |Observation.valueCodeableConcept|N/A|
 {:.grid}
 
+### Frequency (dose timing)
+The core FHIR standard provides advice on how to structure common dose timings in FHIR for machine-readable use cases incl analytics with standard text converters available for the purposes of rendering for human-readability. That advice is excerpted below with examples provided.
+
+GP NAPS data submission export is recommended to structure dose timing, and convert to text as needed.
+
+<p>
+This table summarizes some common uses of the [Timing](http://hl7.org/fhir/R4/datatypes.html#timing) Data Type criteria.
+</p>
+<table class="grid">
+ <tr><td><b>description</b></td> <td><b>duration</b></td> <td><b>durationUnit</b></td> <td><b>frequency</b></td> <td><b>frequencyMax</b></td> <td><b>period</b></td> <td><b>periodUnit</b></td> <td><b>periodMax</b></td> <td><b>Day of Week</b></td> <td><b>Time Of Day</b></td> <td><b>when</b></td> <td><b>offset</b></td>  <td><b>bounds[x]</b></td>  <td><b>count</b></td></tr>
+ <tr><td>Every 8 hours</td>      <td></td>                <td></td>                     <td>1</td>                <td></td>                    <td>8</td>             <td>h</td>                  <td></td>               <td></td>                   <td></td>                   <td></td>          <td></td>               <td></td>               <td></td></tr>
+ <tr><td>Every 7 days</td>       <td></td>                <td></td>                     <td>1</td>                <td></td>                    <td>7</td>             <td>d</td>                  <td></td>               <td></td>                   <td></td>                   <td></td>          <td></td>               <td></td>               <td></td></tr>
+ <tr><td>3 times a day</td>      <td></td>                <td></td>                     <td>3</td>                <td></td>                    <td>1</td>             <td>d</td>                  <td></td>               <td></td>                   <td></td>                   <td></td>          <td></td>               <td></td>               <td></td></tr>
+ <tr><td>3-4 times a day</td>    <td></td>                <td></td>                     <td>3</td>                <td>4</td>                   <td>1</td>             <td>d</td>                  <td></td>               <td></td>                   <td></td>                   <td></td>          <td></td>               <td></td>               <td></td></tr>
+ <tr><td>Every 4-6 hours</td>    <td></td>                <td></td>                     <td>1</td>                <td></td>                    <td>4</td>             <td>h</td>                  <td>6</td>              <td></td>                   <td></td>                   <td></td>          <td></td>               <td></td>               <td></td></tr>
+ <tr><td>Every 21 days for 1 hour</td> <td>1</td>         <td>hr</td>                   <td>1</td>                <td></td>                    <td>21</td>            <td>d</td>                  <td></td>               <td></td>                   <td></td>                   <td></td>          <td></td>               <td></td>               <td></td></tr>
+ <tr><td>Three times a week for ½ hour</td> <td>0.5</td>  <td>hr</td>                   <td>3</td>                <td></td>                    <td>1</td>             <td>wk</td>                 <td></td>               <td></td>                   <td></td>                   <td></td>          <td></td>               <td></td>               <td></td></tr>
+ <tr><td>With breakfast</td>     <td></td>                <td></td>                     <td></td>                 <td></td>                    <td></td>              <td></td>                   <td></td>               <td></td>                   <td></td>                   <td>CM</td>        <td></td>               <td></td>               <td></td></tr>
+ <tr><td>For 5 minutes, 10 minutes before meals</td> <td>5</td>     <td>min</td>        <td></td>                 <td></td>                    <td></td>              <td></td>                   <td></td>               <td></td>                   <td></td>                   <td>AC</td>        <td>10</td>             <td></td>               <td></td></tr>
+ <tr><td>1 tablet 3 times daily, 30 minutes before meals</td> <td></td>  <td></td>      <td>3</td>                <td></td>                    <td>1</td>             <td>d</td>                  <td></td>               <td></td>                   <td></td>                   <td>AC</td>        <td>30</td>             <td></td>               <td></td></tr>
+ <tr><td>BID, 30 mins before meal, for next 10 days</td> <td></td>  <td></td>            <td>2</td>               <td></td>                    <td>1</td>             <td>d</td>                  <td></td>               <td></td>                   <td></td>                   <td>AC</td>        <td>30</td>             <td>Duration = 10 days</td>               <td></td></tr>
+ <tr><td>TID, for 14 days</td>   <td></td>                <td></td>                     <td>3</td>                <td></td>                    <td>1</td>             <td>d</td>                  <td></td>               <td></td>                   <td></td>                   <td></td>          <td></td>               <td>Duration = 14 days</td>               <td></td></tr>
+ <tr><td>BID, start on 7/1/2015 at 1:00 PM</td> <td></td> <td></td>                     <td>2</td>                <td></td>                    <td>1</td>             <td>d</td>                  <td></td>               <td></td>                   <td></td>                   <td></td>          <td></td>               <td>Period.start = 2015-07-01T13:00:00</td>               <td></td></tr>
+ <tr><td>Mon, Wed, Fri Morning</td> <td></td>             <td></td>                     <td>1</td>                <td></td>                    <td>1</td>             <td>d</td>                  <td></td>               <td>mon | wed | fri</td>    <td></td>                   <td>MORN</td>      <td></td>               <td></td>               <td></td></tr>
+ <tr><td>Every day at 10am</td>  <td></td>                <td></td>                     <td>1</td>                <td></td>                    <td>1</td>             <td>d</td>                  <td></td>               <td></td>                   <td>10:00</td>              <td></td>          <td></td>               <td></td>               <td></td></tr>
+ <tr><td>Take once, at any time</td>  <td></td>           <td></td>                     <td></td>                 <td></td>                    <td></td>              <td></td>                   <td></td>               <td></td>                   <td></td>                   <td></td>          <td></td>               <td></td>               <td>1</td></tr>
+ <tr><td>Take every second day, in the morning, until 20 have been taken</td><td></td>  <td></td>  <td>1</td>     <td></td>                    <td>2</td>             <td>d</td>                  <td></td>               <td></td>                   <td></td>                   <td>MORN</td>      <td></td>               <td></td>               <td>20</td></tr>
+</table>
+
+~~~
+  "timing": { //  Frequency 24 hourly, Once a day
+    "repeat" : {
+          "frequency" : 1,
+          "period" : 24,
+          "periodUnit" : "h"
+    }    
+  }
+~~~
+
+~~~
+  "timing": { //  Frequency 6 hourly, Four times a day
+    "repeat" : {
+          "frequency" : 1,
+          "period" : 6,
+          "periodUnit" : "h"
+    }    
+  }
+~~~
+
+~~~
+  "timing": { //  Frequency every 4-6 hours
+    "repeat" : {
+          "frequency" : 1,
+          "period" : 4,
+          "periodMax" : 6,
+          "periodUnit" : "h"
+    }    
+  }
+~~~
+
+~~~
+  "timing": { //  Frequency Two times a week
+    "repeat" : {
+          "frequency" : 2,
+          "period" : 1,
+          "periodUnit" : "wk"
+    }    
+  }
+~~~
+
+
+#### Timing as text only 
+Systems may avoid the complexity of the Timing structure by using a text field for timing instructions. This maps to <code>Timing.code.text</code>, for example:
+
+~~~
+  "timing": {
+    "code" : {
+      "text" : "Take medication in the morning on weekends and days off work"
+    }    
+  }
+~~~
+
+Note, though, that some systems include timing details in something like 'Dosage instructions' which is wider than just Timing; those systems do not use the Timing data type. 
+
+#### Timing as code 
+Other systems use a set of 'common' codes - including, but usually not limited to, 
+widely understood acronyms such as "BID". If a <code>Timing.code</code> is provided, the code is understood to be a complete statement of whatever is specified in the structured timing data (except for <code>Timing.repeat.bounds</code>, which applies to the code), and either the code or the data may be used to interpret the <code>Timing</code>. A structured timing specification SHOULD be provided whenever possible, unless the code is BID, TID, QID, AM or PM, which have a ubiquitous meaning.
+</p>
+<p>
+This table shows the relationship between the codes provided as part of the core FHIR specification, and the structured data portions of the Timing type:
+</p>
+<table class="grid">
+ <tr><td><b>description</b></td> <td><b>duration</b></td> <td><b>durationUnit</b></td> <td><b>frequency</b></td> <td><b>frequencyMax</b></td> <td><b>period</b></td> <td><b>periodUnit</b></td> <td><b>periodMax</b></td> <td><b>when</b></td> <td><b>bounds[x]</b></td></tr>
+ <tr><td>QOD</td>                <td></td>                <td></td>                     <td>1</td>                <td></td>                    <td>2</td>             <td>d</td>                  <td></td>                 <td></td>            <td></td></tr>
+ <tr><td>QD</td>                 <td></td>                <td></td>                     <td>1</td>                <td></td>                    <td>1</td>             <td>d</td>                  <td></td>                 <td></td>            <td></td></tr>
+ <tr><td>BID</td>                <td></td>                <td></td>                     <td>2</td>                <td></td>                    <td>1</td>             <td>d</td>                  <td></td>                 <td></td>            <td></td></tr>
+ <tr><td>TID</td>                <td></td>                <td></td>                     <td>3</td>                <td></td>                    <td>1</td>             <td>d</td>                  <td></td>                 <td></td>            <td></td></tr>
+ <tr><td>QID</td>                <td></td>                <td></td>                     <td>4</td>                <td></td>                    <td>1</td>             <td>d</td>                  <td></td>                 <td></td>            <td></td></tr>
+ <tr><td>Q4H</td>                <td></td>                <td></td>                     <td>1</td>                <td></td>                    <td>4</td>             <td>h</td>                  <td></td>                 <td></td>            <td></td></tr>
+ <tr><td>Q6H</td>                <td></td>                <td></td>                     <td>1</td>                <td></td>                    <td>6</td>             <td>h</td>                  <td></td>                 <td></td>            <td></td></tr>
+ <tr><td>AM</td>                 <td></td>                <td></td>                     <td>1</td>                <td></td>                    <td>1</td>             <td>d</td>                  <td></td>                 <td>MORN</td>        <td></td></tr>
+ <tr><td>PM</td>                 <td></td>                <td></td>                     <td>1</td>                <td></td>                    <td>1</td>             <td>d</td>                  <td></td>                 <td>AFT or EVE</td>  <td></td></tr>
+</table>
+
+~~~
+  "timing": {
+    "code" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation",
+        "code" : "BID",
+        "display" : "BID"
+      }]
+    }    
+  }
+~~~
+
+<p>
+These codes SHALL be understood as having the formal meanings documented in this table. Note that <code>BID</code>, etc. are defined as 'at institutionally specified times'.
+For example, an institution may choose that <code>BID</code> is "always at 7am and 6pm".  If it is inappropriate for this choice to be made, the code <code>BID</code> should not be used. Instead, a distinct organisation-specific code is used in place of the HL7-defined <code>BID</code> code and/or a structured representation should be used (in this case, <code>timeOfDay</code>).
+</p>
 
 ### Pseudonym identifiers (de-identification and re-identification)
 This implementation guide does not prescribe or recommend an approach to de-identification and re-identification of data for NAPS. 
