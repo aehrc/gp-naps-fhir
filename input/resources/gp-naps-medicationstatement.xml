@@ -114,6 +114,7 @@
     <element id="MedicationStatement.effectivePeriod.start">
       <path value="MedicationStatement.effectivePeriod.start"/>
       <comment value="Derived from MedicationRequest.dispenseRequest.validityPeriod.start"/>
+      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationStatement.dateAsserted">
