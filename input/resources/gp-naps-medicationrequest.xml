@@ -15,6 +15,25 @@
     <element id="MedicationRequest">
       <path value="MedicationRequest"/>
     </element>
+    <element id="MedicationRequest.extension">
+      <path value="MedicationRequest.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationRequest.extension:scriptAuthorityType">
+      <path value="MedicationRequest.extension" />
+      <sliceName value="scriptAuthorityType" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-script-authority-type" />
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MedicationRequest.status">
       <path value="MedicationRequest.status"/>
       <short value="active | completed | unknown"/>

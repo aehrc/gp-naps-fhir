@@ -358,6 +358,14 @@
                 <meta>
                     <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
                 </meta>
+                <!-- Prescription Type -->
+                <extension url="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-script-authority-type">
+                    <valueCoding>
+                        <system value="https://www.naps.org.au/fhir/gp/CodeSystem/naps-script-authority-type"/>
+                        <code value="pbs"/>
+                        <display value="Pharmaceutical Benefits Scheme"/>
+                    </valueCoding>
+                </extension>
                 <status value="unknown"/>
                 <intent value="order"/>
                 <medicationReference>
