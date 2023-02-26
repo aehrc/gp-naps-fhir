@@ -91,9 +91,9 @@ The core FHIR standard provides advice on how to structure common dose timings i
 
 GP NAPS data submission export is recommended to structure dose timing, and convert to text as needed.
 
-<p>
-This table summarizes some common uses of the [Timing](http://hl7.org/fhir/R4/datatypes.html#timing) Data Type criteria.
-</p>
+This table summarises some common uses of the [Timing](http://hl7.org/fhir/R4/datatypes.html#timing) Data Type criteria.
+
+
 <table class="grid">
  <tr><td><b>description</b></td> <td><b>duration</b></td> <td><b>durationUnit</b></td> <td><b>frequency</b></td> <td><b>frequencyMax</b></td> <td><b>period</b></td> <td><b>periodUnit</b></td> <td><b>periodMax</b></td> <td><b>Day of Week</b></td> <td><b>Time Of Day</b></td> <td><b>when</b></td> <td><b>offset</b></td>  <td><b>bounds[x]</b></td>  <td><b>count</b></td></tr>
  <tr><td>Every 8 hours</td>      <td></td>                <td></td>                     <td>1</td>                <td></td>                    <td>8</td>             <td>h</td>                  <td></td>               <td></td>                   <td></td>                   <td></td>          <td></td>               <td></td>               <td></td></tr>
@@ -240,7 +240,7 @@ In this implementation guide to support example resources demonstrating the clin
 ...
 ~~~
 
-    with locally managed prescriber identifier the local system (but not NAPS) would use to re-identify
+    - with locally managed prescriber identifier the local system (but not NAPS) would use to re-identify
 
     ~~~
     ...

@@ -163,8 +163,8 @@
       <reference>
         <reference value="Bundle/naps-1"/>
       </reference>
-      <name value="Bundle GP NAPS 1"/>
-      <description value="Bundle GP NAPS 1"/>
+      <name value="Bundle GP NAPS 1 - GP NAPS prescription rulide"/>
+      <description value="Bundle GP NAPS 1 - GP NAPS prescription rulide (Patient GP NAPS 1 batch)"/>
       <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
     </resource>
     <resource>
@@ -187,24 +187,24 @@
       <reference>
         <reference value="Medication/rulide"/>
       </reference>
-      <name value="Medication rulide w strength"/>
-      <description value="Medication rulide w strength"/>
+      <name value="Medication rulide w form"/>
+      <description value="Medication rulide w form"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medication"/>
     </resource>
     <resource>
       <reference>
         <reference value="MedicationRequest/rulide"/>
       </reference>
-      <name value="GP NAPS prescription rulide - referencing a Medication resource"/>
-      <description value="GP NAPS prescription rulide"/>
+      <name value="GP NAPS prescription rulide - with antimicrobial as a Medication resource"/>
+      <description value="GP NAPS prescription rulide - with antimicrobial as a Medication resource"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
     </resource>
     <resource>
       <reference>
         <reference value="MedicationRequest/valaciclovir"/>
       </reference>
-      <name value="GP NAPS prescription valaciclovir"/>
-      <description value="GP NAPS prescription valaciclovir"/>
+      <name value="GP NAPS prescription valaciclovir - with antimocrobial as text"/>
+      <description value="GP NAPS prescription valaciclovir - with antimocrobial as text"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
     </resource>
     <resource>
@@ -219,48 +219,48 @@
       <reference>
         <reference value="Patient/naps-patient-1"/>
       </reference>
-      <name value="Patient GP NAPS 1"/>
-      <description value="Patient GP NAPS 1"/>
+      <name value="Patient - male, neither Aboriginal nor Torres Strait Islander origin"/>
+      <description value="Patient - male, neither Aboriginal nor Torres Strait Islander origin"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-patient"/>
     </resource>
     <resource>
       <reference>
         <reference value="Patient/naps-patient-2"/>
       </reference>
-      <name value="Patient GP NAPS 2"/>
-      <description value="Patient GP NAPS 2"/>
+      <name value="Patient - other, neither Aboriginal nor Torres Strait Islander origin"/>
+      <description value="Patient - other, neither Aboriginal nor Torres Strait Islander origin"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-patient"/>
     </resource>
     <resource>
       <reference>
         <reference value="Patient/naps-patient-3"/>
       </reference>
-      <name value="Patient GP NAPS 3"/>
-      <description value="Patient GP NAPS 3"/>
+      <name value="Patient - female, both Aboriginal and Torres Strait Islander origin"/>
+      <description value="Patient - female, both Aboriginal and Torres Strait Islander origin"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-patient"/>
     </resource>
     <resource>
       <reference>
         <reference value="PractitionerRole/naps-practitionerrole-1"/>
       </reference>
-      <name value="PractitionerRole GP NAPS 1"/>
-      <description value="PractitionerRole GP NAPS 1"/>
+      <name value="PractitionerRole - general practice specialty"/>
+      <description value="PractitionerRole - general practice specialty, practising at Organization with identifier 3235209"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-practitionerrole"/>
     </resource>
     <resource>
       <reference>
         <reference value="PractitionerRole/naps-practitionerrole-2"/>
       </reference>
-      <name value="PractitionerRole GP NAPS 2"/>
-      <description value="PractitionerRole GP NAPS 2"/>
+      <name value="PractitionerRole - aged care specialty"/>
+      <description value="PractitionerRole - aged care specialty, practising at Organization with identifier 3235209"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-practitionerrole"/>
     </resource>
     <resource>
       <reference>
         <reference value="PractitionerRole/naps-practitionerrole-3"/>
       </reference>
-      <name value="PractitionerRole GP NAPS 3"/>
-      <description value="PractitionerRole GP NAPS 3"/>
+      <name value="PractitionerRole - oncology specialty"/>
+      <description value="PractitionerRole - oncology specialty, practising at Organization with identifier urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7 "/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-practitionerrole"/>
     </resource>
     <resource>
@@ -283,48 +283,48 @@
       <reference>
         <reference value="Observation/naps-crcl-1"/>
       </reference>
-      <name value="CrCl (creatinine clearance)"/>
-      <description value="CrCl (creatinine clearance)"/>
+      <name value="CrCl (creatinine clearance) 128 mL/min"/>
+      <description value="CrCl (creatinine clearance) 128 mL/min"/>
       <exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult"/>
     </resource>
     <resource>
       <reference>
         <reference value="Observation/naps-egfr-1"/>
       </reference>
-      <name value="eGFR (estimated glomerular filtration rate)"/>
-      <description value="eGFR (estimated glomerular filtration rate)"/>
+      <name value="eGFR (estimated glomerular filtration rate) &gt;60 mL/min/1.73m2"/>
+      <description value="eGFR (estimated glomerular filtration rate) &gt;60 mL/min/1.73m2"/>
       <exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult"/>
     </resource>
     <resource>
       <reference>
         <reference value="Observation/naps-smokingstatus-1"/>
       </reference>
-      <name value="Smoking Status"/>
-      <description value="Smoking Status"/>
+      <name value="Smoking status ex-smoker"/>
+      <description value="Smoking status ex-smoker"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-smokingstatus"/>
     </resource>
     <resource>
       <reference>
         <reference value="Observation/naps-weight-1"/>
       </reference>
-      <name value="Body Weight"/>
-      <description value="Body Weight"/>
+      <name value="Body weight 75 kg"/>
+      <description value="Body weight 75 kg"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-bodyweight"/>
     </resource>
     <resource>
       <reference>
         <reference value="Organization/naps-organization-1"/>
       </reference>
-      <name value="Organization GP NAPS 1"/>
-      <description value="GP NAPS 1"/>
+      <name value="Organization QLD 4655"/>
+      <description value="Organization QLD 4655 with identifier within a NAPS naming system"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-organization"/>
     </resource>
     <resource>
       <reference>
         <reference value="Organization/naps-organization-2"/>
       </reference>
-      <name value="Organization GP NAPS 2"/>
-      <description value="GP NAPS 2"/>
+      <name value="Organization VIC 3002"/>
+      <description value="Organization VIC 3002 with identifier as uuid"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-organization"/>
     </resource>
     <resource>
