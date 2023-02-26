@@ -35,7 +35,7 @@
       <reference>
         <reference value="StructureDefinition/gp-naps-age"/>
       </reference>
-      <description value="GP NAPS AllergyIntolerance"/>
+      <description value="GP NAPS Age"/>
     </resource>
     <resource>
       <reference>
