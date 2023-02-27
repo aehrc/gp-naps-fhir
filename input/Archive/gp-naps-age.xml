@@ -66,6 +66,9 @@
       <type>
         <code value="Quantity" />
       </type>
+      <type>
+        <code value="Range"/>
+      </type>
       <min value="1"/>
       <mustSupport value="true"/>
       <binding>

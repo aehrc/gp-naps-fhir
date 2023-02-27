@@ -15,14 +15,6 @@
     <include> 
       <system value="http://unitsofmeasure.org"/> 
       <concept> 
-        <code value="d"/> 
-        <display value="days"/> 
-      </concept> 
-      <concept> 
-        <code value="wk"/> 
-        <display value="weeks"/> 
-      </concept> 
-      <concept> 
         <code value="mo"/> 
         <display value="months"/> 
       </concept> 

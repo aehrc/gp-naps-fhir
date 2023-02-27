@@ -12,10 +12,10 @@
             <display value="Laboratory"/>
         </coding>
     </category>
-    <code>        <!--     Kind of observation = eGFR for AA     -->
+    <code>        <!--     Kind of observation = eGFR   -->
         <coding>
             <system value="http://loinc.org"/>
-            <code value="98979-8"/>
+            <code value="62238-1"/>
         </coding>
     </code>
     <subject>

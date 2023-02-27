@@ -1,13 +1,15 @@
 ### GP NAPS Data Submission
 Fields to be passed to NAPS from general practice patient record management software systems in use in Australia.
 
-The table below identifies the element that is the primary semantic match for that field to support ingestion of the data submission into the NAPS system. A complete FHIR data submission will populate a clinical or administrative concept in each FHIR resource that concept is applicable, for example:
+The table below identifies the element that is the primary match for that field to support ingestion of the data submission into the NAPS system. 
+
+A complete FHIR data submission will populate a clinical or administrative concept in each FHIR resource that concept is applicable, for example:
 - each FHIR resource will declare it's context including the patient
 - date of visit is primarily matched to MedicationRequest.authoredOn but may also be populated in  MedicationStatement, Encounter, Specimen and Observation resources.
 
-For guidance on a complete FHIR data submission see the section [Complete FHIR data submission](guidance.html#complete-fhir-data-submission).
+For guidance on constructing a complete FHIR data submission see the section [Complete FHIR data submission](guidance.html#complete-fhir-data-submission).
 
-|GP NAPs data field|GP NAPS Profile|FHIR element|
+|GP NAPs data field|GP NAPS Profile|Primary FHIR element|
 |---|----|---|---|
 |State/Territory|[GP NAPS Organization](StructureDefinition-gp-naps-organization.html)|Organization.address.state|
 |Postcode|[GP NAPS Organization](StructureDefinition-gp-naps-organization.html)|Organization.address.postalCode|
@@ -30,8 +32,8 @@ For guidance on a complete FHIR data submission see the section [Complete FHIR d
 |Nature of Allergies|[GP NAPS AllergyIntolerance](StructureDefinition-gp-naps-allergyintolerance.html)|AllergyIntolerance.reaction.manifestation|
 |Severity|[GP NAPS AllergyIntolerance](StructureDefinition-gp-naps-allergyintolerance.html)|AllergyIntolerance.reaction.severity|
 |Specialty|[GP NAPS PractitionerRole](StructureDefinition-gp-naps-practitionerrole.html)|PractitionerRole.specialty|
-|Age|[GP NAPS Age](StructureDefinition-gp-naps-age.html)|Observation.valueQuantity.value XOR Observation.valueRange.low.value and Observation.valueRange.high.value|
-|AgeUnit|[GP NAPS Age](StructureDefinition-gp-naps-age.html)|Observation.valueQuantity.unit XOR Observation.valueRange.low.unit and Observation.valueRange.high.unit|
+|Age|[GP NAPS Age](StructureDefinition-gp-naps-age.html)|Observation.valueQuantity.value|
+|AgeUnit|[GP NAPS Age](StructureDefinition-gp-naps-age.html)|Observation.valueQuantity.unit|
 |Weight|[GP NAPS Body Weight](StructureDefinition-gp-naps-bodyweight.html)|Observation.valueQuantity|
 |eGFR|[GP NAPS Pathology Result](StructureDefinition-gp-naps-pathologyresult.html)|Observation.valueQuantity|
 |CrCl|[GP NAPS Pathology Result](StructureDefinition-gp-naps-pathologyresult.html)|Observation.valueQuantity|
@@ -74,8 +76,8 @@ The table below provides guidance to developers implementing data export from a 
 |Nature of Allergies|AllergyIntolerance.reaction.manifestation|N/A|
 |Severity|AllergyIntolerance.reaction.severity|N/A|
 |Specialty|PractitionerRole.specialty|N/A|
-|Age|Observation.valueQuantity.value XOR Observation.valueRange.low.value and Observation.valueRange.high.value|N/A|
-|AgeUnit|Observation.valueQuantity.unit XOR Observation.valueRange.low.unit and Observation.valueRange.high.unit|N/A|
+|Age|Observation.valueQuantity.value|N/A|
+|AgeUnit|Observation.valueQuantity.unit|N/A|
 |Weight|Observation.valueQuantity|N/A|
 |eGFR|Observation.valueQuantity|N/A|
 |CrCl|Observation.valueQuantity|N/A|
