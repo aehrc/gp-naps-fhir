@@ -36,7 +36,14 @@
     </element>
     <element id="MedicationRequest.status">
       <path value="MedicationRequest.status"/>
-      <short value="active | completed | unknown"/>
+      <short value="active is the default value"/>
+      <constraint>
+        <key value="gp-naps-medreq-01"/>
+        <severity value="error"/>
+        <human value="status shall not be cancelled, draft or entered-in-error"/>
+        <expression value="($this!='cancelled') and ($this!='draft') and ($this!='entered-in-error')"/>
+        <source value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationRequest.intent">
@@ -112,14 +119,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MedicationRequest.encounter">
-      <path value="MedicationRequest.encounter"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-encounter"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
     <element id="MedicationRequest.supportingInformation:age">
       <path value="MedicationRequest.supportingInformation"/>
       <sliceName value="age"/>
@@ -163,6 +162,26 @@
       <path value="MedicationRequest.dosageInstruction"/>
       <mustSupport value="true"/>
     </element>
+    <element id="MedicationRequest.dosageInstruction.text">
+      <path value="MedicationRequest.dosageInstruction.text"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.dosageInstruction.timing">
+      <path value="MedicationRequest.dosageInstruction.timing"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.dosageInstruction.route">
+      <path value="MedicationRequest.dosageInstruction.route"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.dosageInstruction.doseAndRate">
+      <path value="MedicationRequest.dosageInstruction.doseAndRate"/>
+      <mustSupport value="true"/>
+    </element>
+     <element id="MedicationRequest.dosageInstruction.doseAndRate.doseQuantity">
+      <path value="MedicationRequest.dosageInstruction.doseAndRate.doseQuantity"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="MedicationRequest.dispenseRequest">
       <path value="MedicationRequest.dispenseRequest"/>
       <mustSupport value="true"/>
@@ -180,7 +199,6 @@
         <severity value="error"/>
         <human value="Date shall be at least to day"/>
         <expression value="toString().length() &gt;= 10"/>
-        <xpath value="f:matches(effectiveDateTime,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)"/>
         <source value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
       </constraint>
       <mustSupport value="true"/>

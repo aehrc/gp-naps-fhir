@@ -53,6 +53,7 @@
     </element>
     <element id="AllergyIntolerance.reaction">
       <path value="AllergyIntolerance.reaction"/>
+      <max value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="AllergyIntolerance.reaction.substance">

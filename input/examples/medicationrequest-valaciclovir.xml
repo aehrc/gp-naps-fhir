@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MedicationRequest xmlns="http://hl7.org/fhir">
-  <id value="valaciclovir"/>
+  <id value="unknown"/>
   <meta>
     <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
   </meta>

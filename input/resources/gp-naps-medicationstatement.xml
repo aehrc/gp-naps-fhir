@@ -98,15 +98,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MedicationStatement.context">
-      <path value="MedicationStatement.context"/>
-      <comment value="Derived from MedicationRequest.encounter"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-encounter"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
     <element id="MedicationStatement.effectivePeriod">
       <path value="MedicationStatement.effectivePeriod"/>
       <mustSupport value="true"/>
@@ -142,6 +133,26 @@
     <element id="MedicationStatement.dosage">
       <path value="MedicationStatement.dosage"/>
       <comment value="Derived from MedicationRequest.dosageInstruction"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.dosage.text">
+      <path value="MedicationStatement.dosage.text"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.dosage.timing">
+      <path value="MedicationStatement.dosage.timing"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.dosage.route">
+      <path value="MedicationStatement.dosage.route"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.dosage.doseAndRate">
+      <path value="MedicationStatement.dosage.doseAndRate"/>
+      <mustSupport value="true"/>
+    </element>
+     <element id="MedicationStatement.dosage.doseAndRate.doseQuantity">
+      <path value="MedicationStatement.dosage.doseAndRate.doseQuantity"/>
       <mustSupport value="true"/>
     </element>
   </differential>

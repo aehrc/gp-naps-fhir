@@ -14,6 +14,14 @@
     <versionNeeded value="false" />
     <content value="complete" />
     <concept>
+        <code value="dva" />
+        <display value="Department of Veterans' Affairs" />
+        <property>
+            <code value="status"/>
+            <valueCode value="active"/>
+        </property>
+    </concept>
+    <concept>
         <code value="pbs" />
         <display value="Pharmaceutical Benefits Scheme" />
         <property>
