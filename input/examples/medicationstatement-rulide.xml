@@ -10,10 +10,15 @@
     </extension>
     <!-- Derived from MedicationRequest that is instance-order - Medication -->
     <status value="intended"/>
-    <!-- Derived from MedicationRequest - Medication -->
-    <medicationReference>
-        <reference value="Medication/rulide"/>
-    </medicationReference>
+    <!-- Derived from MedicationRequest.medicationCodeableConcept -->
+    <medicationCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="5368011000036100"/>
+            <display value="Rulide 150 mg tablet"/>
+        </coding>
+        <text value="Rulide 150 mg tablet"/>
+    </medicationCodeableConcept>
     <!-- Derived from MedicationRequest - Subject -->
     <subject>
         <reference value="Patient/naps-patient-1"/>

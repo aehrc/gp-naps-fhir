@@ -18,11 +18,10 @@ For guidance on constructing a complete FHIR data submission see the section [Co
 |Prescription type|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.extension:scriptAuthorityType|
 |Date of visit|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.authoredOn|
 |Date of prescription|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.dispenseRequest.validityPeriod.start|
-|Antimicrobial|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.medicationCodeableConcept XOR Medication.code|
+|Antimicrobial|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.medicationCodeableConcept|
 |Route|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.dosageInstruction.route|
 |Dose|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.value|
 |Dose unit|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.unit|
-|Dose form|[GP NAPS Medication](StructureDefinition-gp-naps-medication.html)|Medication.form|
 |Frequency|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.dosageInstruction.timing|
 |Quantity|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.dispenseRequest.quantity|
 |Repeats|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.dispenseRequest.numberOfRepeatsAllowed|
@@ -38,7 +37,7 @@ For guidance on constructing a complete FHIR data submission see the section [Co
 |eGFR|[GP NAPS Pathology Result](StructureDefinition-gp-naps-pathologyresult.html)|Observation.valueQuantity|
 |CrCl|[GP NAPS Pathology Result](StructureDefinition-gp-naps-pathologyresult.html)|Observation.valueQuantity|
 |Microbiology collected|[GP NAPS Specimen](StructureDefinition-gp-naps-specimen.html)|Specimen.type|
-|Microbiology date collected|[GP NAPS Pathology Result](StructureDefinition-gp-naps-pathologyresult.html)|Observation.effectiveDateTime XOR Observation.effectivePeriod|
+|Microbiology date collected|[GP NAPS Pathology Result](StructureDefinition-gp-naps-pathologyresult.html)|Observation.effectiveDateTime|
 |Microbiology collected test|[GP NAPS Pathology Result](StructureDefinition-gp-naps-pathologyresult.html)|Observation.code|
 |Microbiology collected result|[GP NAPS Pathology Result](StructureDefinition-gp-naps-pathologyresult.html)|Observation.value[x]|
 |smoking status |[GP NAPS Smoking Status](StructureDefinition-gp-naps-smokingstatus.html)|Observation.valueCodeableConcept|
@@ -62,7 +61,7 @@ The table below provides guidance to developers implementing data export from a 
 |Prescription type|MedicationRequest.extension:scriptAuthorityType|N/A|
 |Date of visit|MedicationRequest.authoredOn|Encounter.period.end and MedicationStatement.dateAsserted and Observation(Age).effectiveDateTime|
 |Date of prescription|MedicationRequest.dispenseRequest.validityPeriod.start|MedicationStatement.effectivePeriod.start|
-|Antimicrobial|MedicationRequest.medicationCodeableConcept XOR Medication.code|If use of MedicationRequest.medicationCodeableConcept then MedicationStatement.medicationCodeableConcept. |
+|Antimicrobial|MedicationRequest.medicationCodeableConcept|MedicationStatement.medicationCodeableConcept. |
 |Route|MedicationRequest.dosageInstruction.route|MedicationStatement.dosage.route|
 |Dose|MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.value|MedicationStatement.dosage.doseAndRate.doseQuantity.value|
 |Dose unit|MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.unit|MedicationStatement.dosage.doseAndRate.doseQuantity.unit|
@@ -82,7 +81,7 @@ The table below provides guidance to developers implementing data export from a 
 |eGFR|Observation.valueQuantity|N/A|
 |CrCl|Observation.valueQuantity|N/A|
 |Microbiology collected|Specimen.type|N/A|
-|Microbiology date collected|Observation.effectiveDateTime XOR Observation.effectivePeriod|Specimen.collection.collected[x]|
+|Microbiology date collected|Observation.effectiveDateTime|Specimen.collection.collectedDateTime|
 |Microbiology collected test|Observation.code|N/A|
 |Microbiology collected result|Observation.value[x]|N/A|
 |smoking status |Observation.valueCodeableConcept|N/A|

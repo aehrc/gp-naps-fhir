@@ -368,9 +368,14 @@
                 </extension>
                 <status value="unknown"/>
                 <intent value="order"/>
-                <medicationReference>
-                    <reference value="urn:uuid:fc682365-a035-4450-bbbb-a369b6cfaeb6"/>
-                </medicationReference>
+                <medicationCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="5368011000036100"/>
+                        <display value="Rulide 150 mg tablet"/>
+                    </coding>
+                    <text value="Rulide 150 mg tablet"/>
+                </medicationCodeableConcept>
                 <subject>
                     <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
                 </subject>
@@ -452,10 +457,15 @@
                 </extension>
                 <!-- Derived from MedicationRequest that is instance-order - Medication -->
                 <status value="intended"/>
-                <!-- Derived from MedicationRequest - Medication -->
-                <medicationReference>
-                    <reference value="urn:uuid:fc682365-a035-4450-bbbb-a369b6cfaeb6"/>
-                </medicationReference>
+                <!-- Derived from MedicationRequest.medicationCodeableConcept -->
+                <medicationCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="5368011000036100"/>
+                        <display value="Rulide 150 mg tablet"/>
+                    </coding>
+                    <text value="Rulide 150 mg tablet"/>
+                </medicationCodeableConcept>
                 <!-- Derived from MedicationRequest - Subject -->
                 <subject>
                     <reference value="urn:uuid:3fe721b9-2258-4707-a9cf-c13dd7d03747"/>
@@ -497,29 +507,6 @@
                     </doseAndRate>
                 </dosage>
             </MedicationStatement>
-        </resource>
-    </entry>
-    <entry>
-        <fullUrl value="urn:uuid:fc682365-a035-4450-bbbb-a369b6cfaeb6"/>
-        <resource>
-            <Medication>
-                <meta>
-                    <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medication"/>
-                </meta>
-                <!-- Antimicrobial -->
-                <code>
-                    <text value="Rulide 150mg Tablet"/>
-                </code>
-                <!-- Dose form -->
-                <form>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="154011000036109"/>
-                        <display value="tablet"/>
-                    </coding>
-                    <text value="Tablet"/>
-                </form>
-            </Medication>
         </resource>
     </entry>
 </Bundle>

@@ -11,15 +11,6 @@ This guide does not cover:
 - data access and API
 - data privacy and security controls
 
-### Design queries to resolve
-- What makes this General Practice? It it a GP system regardless of whether it's in an aged care facility? or is that the data is coming from a General Practice organization?
-- Microbiology - only tests with results? or include tests ordered?
-- Microbiology - is specimen type required in addition to test ordered? - recommend removal of Specimen profile unless required for specimen type
-- Microbiology - collection date - can this be supported as a Period? or only date time?
-- Antimicrobial terminology - is WHO ATC to be supported? PBS? AMT? SNOMED CT?
-- Antimicrobial form - is this required separate from the medications terminology?
-- Is Encounter relevant? Currently holds no unique GP NAPS data - recommend removal of Encounter profile unless required to generate unique Encounter IDs on ingestion of data submission
-
 
 ### How to Read this Guide
 

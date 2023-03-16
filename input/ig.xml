@@ -57,12 +57,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/gp-naps-medication"/>
-      </reference>
-      <description value="GP NAPS Medication"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/gp-naps-medicationrequest"/>
       </reference>
       <description value="GP NAPS MedicationRequest"/>
@@ -185,18 +179,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Medication/rulide"/>
-      </reference>
-      <name value="Medication rulide w form"/>
-      <description value="Medication rulide w form"/>
-      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medication"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="MedicationRequest/rulide"/>
       </reference>
-      <name value="GP NAPS prescription rulide - with antimicrobial as a Medication resource"/>
-      <description value="GP NAPS prescription rulide - with antimicrobial as a Medication resource"/>
+      <name value="GP NAPS prescription rulide - with antimicrobial as code"/>
+      <description value="GP NAPS prescription rulide - with antimicrobial as a code"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
     </resource>
     <resource>

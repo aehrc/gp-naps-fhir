@@ -14,9 +14,14 @@
     </extension>
     <status value="unknown"/>
     <intent value="order"/>
-    <medicationReference>
-        <reference value="Medication/rulide"/>
-    </medicationReference>
+    <medicationCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="5368011000036100"/>
+            <display value="Rulide 150 mg tablet"/>
+        </coding>
+        <text value="Rulide 150 mg tablet"/>
+    </medicationCodeableConcept>
     <subject>
         <reference value="Patient/naps-patient-1"/>
     </subject>
