@@ -5,7 +5,7 @@
   <name value="GPNAPSPatient"/>
   <title value="GP NAPS Patient"/>
   <status value="draft"/>
-  <description value="This profile sets minimum expectations for a Patient resource to support basic demographics and other administrative information about a patient in the context of General Practitioner National Antimicrobial Prescribing Survey (NAPS). It is based on the [AU Base Patient](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Patient when conforming to this profile."/>
+  <description value="This profile sets minimum expectations for a Patient resource to support demographics information of interest about a patient in the context of General Practitioner National Antimicrobial Prescribing Survey (NAPS). It is based on the [AU Base Patient](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Patient when conforming to this profile."/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Patient"/>
@@ -18,11 +18,6 @@
     <element id="Patient.extension:indigenousStatus">
       <path value="Patient.extension"/>
       <sliceName value="indigenousStatus"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.gender">
-      <path value="Patient.gender"/>
-      <min value="1"/>
       <mustSupport value="true"/>
     </element>
   </differential>

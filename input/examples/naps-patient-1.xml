@@ -12,7 +12,5 @@
             <display value="Neither Aboriginal nor Torres Strait Islander origin"/>
         </valueCoding>
     </extension>
-    <!-- Gender -->
-    <gender value="male"/>
 </Patient>
         

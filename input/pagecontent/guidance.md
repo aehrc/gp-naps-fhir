@@ -13,7 +13,8 @@ For guidance on constructing a complete FHIR data submission see the section [Co
 |---|----|---|---|
 |State/Territory|[GP NAPS Organization](StructureDefinition-gp-naps-organization.html)|Organization.address.state|
 |Postcode|[GP NAPS Organization](StructureDefinition-gp-naps-organization.html)|Organization.address.postalCode|
-|Gender|[GP NAPS Patient](StructureDefinition-gp-naps-patient.html)|Patient.gender|
+|Biological Sex|TBD|TBD|
+|Trimester (pregnancy)|TBD|TBD|
 |Indigenous Status |[GP NAPS Patient](StructureDefinition-gp-naps-patient.html)|Patient.extension:indigenousStatus|
 |Prescription type|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.extension:scriptAuthorityType|
 |Date of visit|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.authoredOn|
@@ -56,7 +57,8 @@ The table below provides guidance to developers implementing data export from a 
 |---|----|---|
 |State/Territory|Organization.address.state|N/A|
 |Postcode|Organization.address.postalCode|N/A|
-|Gender|Patient.gender|N/A|
+|Biological Sex|TBD|N/A|
+|Trimester (pregnancy)|TBD|N/A|
 |Indigenous Status |Patient.extension:indigenousStatus|N/A|
 |Prescription type|MedicationRequest.extension:scriptAuthorityType|N/A|
 |Date of visit|MedicationRequest.authoredOn|Encounter.period.end and MedicationStatement.dateAsserted and Observation(Age).effectiveDateTime|

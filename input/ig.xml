@@ -227,6 +227,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Patient/naps-patient-4"/>
+      </reference>
+      <name value="Patient - technical identifier only, no ethnicity information"/>
+      <description value="Patient - technical identifier only, no ethnicity information"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-patient"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="PractitionerRole/naps-practitionerrole-1"/>
       </reference>
       <name value="PractitionerRole - general practice specialty"/>
