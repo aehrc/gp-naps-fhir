@@ -13,7 +13,7 @@ For guidance on constructing a complete FHIR data submission see the section [Co
 |---|----|---|---|
 |State/Territory|[GP NAPS Organization](StructureDefinition-gp-naps-organization.html)|Organization.address.state|
 |Postcode|[GP NAPS Organization](StructureDefinition-gp-naps-organization.html)|Organization.address.postalCode|
-|Biological Sex|TBD|TBD|
+|Biological Sex|MedicationRequest.extension:sexForClinicalUse|N/A|
 |Trimester (pregnancy)|[GP NAPS Gestational Age Trimester](StructureDefinition-gp-naps-gestational-age-trimester.html)|Observation.valueCodeableConcept|
 |Indigenous Status |[GP NAPS Patient](StructureDefinition-gp-naps-patient.html)|Patient.extension:indigenousStatus|
 |Prescription type|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.extension:scriptAuthorityType|
@@ -57,7 +57,7 @@ The table below provides guidance to developers implementing data export from a 
 |---|----|---|
 |State/Territory|Organization.address.state|N/A|
 |Postcode|Organization.address.postalCode|N/A|
-|Biological Sex|TBD|N/A|
+|Biological Sex|MedicationRequest.extension:sexForClinicalUse|N/A|
 |Trimester (pregnancy)|Observation.valueCodeableConcept|N/A|
 |Indigenous Status |Patient.extension:indigenousStatus|N/A|
 |Prescription type|MedicationRequest.extension:scriptAuthorityType|N/A|

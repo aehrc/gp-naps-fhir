@@ -4,14 +4,22 @@
   <meta>
     <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-medicationrequest"/>
   </meta>
+  <!-- Sex for Clinical Use -->
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse">
+    <valueCoding>
+      <system value="http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"/>
+      <code value="female-typical"/>
+      <display value="Apply female-typical setting or reference range"/>
+    </valueCoding>
+  </extension>
   <!-- Prescription type -->
-    <extension url="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-script-authority-type">
-        <valueCoding>
-            <system value="https://www.naps.org.au/fhir/gp/CodeSystem/naps-script-authority-type"/>
-            <code value="priv"/>
-            <display value="Private"/>
-        </valueCoding>
-    </extension>
+  <extension url="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-script-authority-type">
+    <valueCoding>
+      <system value="https://www.naps.org.au/fhir/gp/CodeSystem/naps-script-authority-type"/>
+      <code value="priv"/>
+      <display value="Private"/>
+    </valueCoding>
+  </extension>
   <status value="unknown"/>
   <intent value="order"/>
   <!-- Antimicrobial -->

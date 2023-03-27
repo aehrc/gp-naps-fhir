@@ -25,6 +25,16 @@
         <rules value="open" />
       </slicing>
     </element>
+    <element id="MedicationRequest.extension:sexForClinicalUse">
+      <path value="MedicationRequest.extension"/>
+      <sliceName value="sexForClinicalUse"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MedicationRequest.extension:scriptAuthorityType">
       <path value="MedicationRequest.extension" />
       <sliceName value="scriptAuthorityType" />
