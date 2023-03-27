@@ -85,6 +85,18 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="MedicationRequest.supportingInformation:trimester">
+      <path value="MedicationRequest.supportingInformation"/>
+      <sliceName value="trimester"/>
+      <short value="Observation of gestational age by trimester"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-gestational-age-trimester"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MedicationRequest.authoredOn">
       <path value="MedicationRequest.authoredOn"/>
       <min value="1"/>

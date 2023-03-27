@@ -28,6 +28,10 @@
   <supportingInformation>
     <reference value="Observation/naps-age-lessthanmonth"/>
   </supportingInformation>
+  <!-- Gestational Age Trimester -->
+  <supportingInformation>
+    <reference value="Observation/naps-1st-trimester"/>
+  </supportingInformation>
   <!-- Date of visit -->
   <authoredOn value="2018-07-15"/>
   <requester>

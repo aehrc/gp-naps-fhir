@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="naps-1st-trimester"/>
+    <meta>
+        <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-gestational-age-trimester"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="366323009"/>
+            <display value="Finding of length of gestation"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/naps-patient-2"/>
+    </subject>
+    <effectiveDateTime value="2018-07-15"/>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="57630001"/>
+            <display value="First trimester pregnancy"/>
+        </coding>
+    </valueCodeableConcept>
+</Observation>

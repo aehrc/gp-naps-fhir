@@ -57,6 +57,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/gp-naps-gestational-age-trimester"/>
+      </reference>
+      <description value="GP NAPS Gestational Age Trimester"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/gp-naps-medicationrequest"/>
       </reference>
       <description value="GP NAPS MedicationRequest"/>
@@ -113,6 +119,12 @@
 		<resource>
 			<reference>
 				<reference value="ValueSet/naps-age-units"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+    <resource>
+			<reference>
+				<reference value="ValueSet/naps-gestational-age-trimester"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
@@ -256,6 +268,14 @@
       <name value="PractitionerRole - oncology specialty"/>
       <description value="PractitionerRole - oncology specialty, practising at Organization with identifier urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7"/>
       <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-practitionerrole"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/naps-1st-trimester"/>
+      </reference>
+      <name value="Patient age as less than one month"/>
+      <description value="Patient age as less than one month"/>
+      <exampleCanonical value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-gestational-age-trimester"/>
     </resource>
     <resource>
       <reference>

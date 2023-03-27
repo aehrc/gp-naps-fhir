@@ -14,7 +14,7 @@ For guidance on constructing a complete FHIR data submission see the section [Co
 |State/Territory|[GP NAPS Organization](StructureDefinition-gp-naps-organization.html)|Organization.address.state|
 |Postcode|[GP NAPS Organization](StructureDefinition-gp-naps-organization.html)|Organization.address.postalCode|
 |Biological Sex|TBD|TBD|
-|Trimester (pregnancy)|TBD|TBD|
+|Trimester (pregnancy)|[GP NAPS Gestational Age Trimester](StructureDefinition-gp-naps-gestational-age-trimester.html)|Observation.valueCodeableConcept|
 |Indigenous Status |[GP NAPS Patient](StructureDefinition-gp-naps-patient.html)|Patient.extension:indigenousStatus|
 |Prescription type|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.extension:scriptAuthorityType|
 |Date of visit|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.authoredOn|
@@ -58,10 +58,10 @@ The table below provides guidance to developers implementing data export from a 
 |State/Territory|Organization.address.state|N/A|
 |Postcode|Organization.address.postalCode|N/A|
 |Biological Sex|TBD|N/A|
-|Trimester (pregnancy)|TBD|N/A|
+|Trimester (pregnancy)|Observation.valueCodeableConcept|N/A|
 |Indigenous Status |Patient.extension:indigenousStatus|N/A|
 |Prescription type|MedicationRequest.extension:scriptAuthorityType|N/A|
-|Date of visit|MedicationRequest.authoredOn|Encounter.period.end and MedicationStatement.dateAsserted and Observation(Age).effectiveDateTime|
+|Date of visit|MedicationRequest.authoredOn|Encounter.period.end and MedicationStatement.dateAsserted and Observation(Age).effectiveDateTime and Observation(Gestational Age Trimester).effectiveDateTime|
 |Date of prescription|MedicationRequest.dispenseRequest.validityPeriod.start|MedicationStatement.effectivePeriod.start|
 |Antimicrobial|MedicationRequest.medicationCodeableConcept|MedicationStatement.medicationCodeableConcept. |
 |Route|MedicationRequest.dosageInstruction.route|MedicationStatement.dosage.route|

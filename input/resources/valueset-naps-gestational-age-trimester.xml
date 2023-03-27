@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="naps-gestational-age-trimester"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="https://www.naps.org.au/fhir/gp/ValueSet/naps-gestational-age-trimester"/>
+    <name value="NAPSGestationalAgeTrimesterResponse"/>
+    <title value="NAPS Gestational Age Trimester Response"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <description value="The NAPS Gestational Age Trimester Response value set includes values that may be used to represent a response for the gestational age by trimester for a patient."/>
+    <copyright value="This resource includes SNOMED Clinical Terms™ (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO. &#xa;&#xa;The rights to use and implement or implementation of SNOMED CT content are limited to the extent it is necessary to allow for the end use of this material.  No further rights are granted in respect of the International Release and no further use of any SNOMED CT content by any other party is permitted."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="57630001"/>
+            </concept>
+            <concept>
+                <code value="59466002"/>
+            </concept>
+            <concept>
+                <code value="41587001"/>
+            </concept>
+            <concept>
+                <code value="60001007"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
+            <concept>
+                <code value="unknown"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>
