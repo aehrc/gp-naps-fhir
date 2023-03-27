@@ -39,6 +39,7 @@
     </element>
     <element id="AllergyIntolerance.code">
       <path value="AllergyIntolerance.code"/>
+      <short value="GP NAPS data field: Allergies to Antimicrobial"/>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
@@ -63,10 +64,12 @@
     </element>
     <element id="AllergyIntolerance.reaction.manifestation">
       <path value="AllergyIntolerance.reaction.manifestation"/>
+      <short value="GP NAPS data field: Nature of Allergies"/>
       <mustSupport value="true"/>
     </element>
     <element id="AllergyIntolerance.reaction.severity">
       <path value="AllergyIntolerance.reaction.severity"/>
+      <short value="GP NAPS data field: Severity"/>
       <mustSupport value="true"/>
     </element>
   </differential>

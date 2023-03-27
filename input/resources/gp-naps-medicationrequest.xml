@@ -28,6 +28,7 @@
     <element id="MedicationRequest.extension:sexForClinicalUse">
       <path value="MedicationRequest.extension"/>
       <sliceName value="sexForClinicalUse"/>
+      <short value="GP NAPS data field: Biological sex"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
@@ -38,6 +39,7 @@
     <element id="MedicationRequest.extension:scriptAuthorityType">
       <path value="MedicationRequest.extension" />
       <sliceName value="scriptAuthorityType" />
+      <short value="GP NAPS data field: Prescription type"/>
       <type>
         <code value="Extension" />
         <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-script-authority-type" />
@@ -64,6 +66,7 @@
     <element id="MedicationRequest.medication[x]:medicationCodeableConcept">
       <path value="MedicationRequest.medication[x]"/>
       <sliceName value="medicationCodeableConcept"/>
+      <short value="GP NAPS data field: Antimicrobial"/>
       <min value="1"/>
       <type>
         <code value="CodeableConcept"/>
@@ -77,6 +80,7 @@
     </element>
     <element id="MedicationRequest.subject">
       <path value="MedicationRequest.subject"/>
+      <short value="GP NAPS data field: Patient"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-patient"/>
@@ -86,7 +90,7 @@
     <element id="MedicationRequest.supportingInformation:age">
       <path value="MedicationRequest.supportingInformation"/>
       <sliceName value="age"/>
-      <short value="Observation of age"/>
+      <short value="GP NAPS data field: Age and AgeUnit"/>
       <min value="1"/>
       <max value="1"/>
       <type>
@@ -98,7 +102,7 @@
     <element id="MedicationRequest.supportingInformation:trimester">
       <path value="MedicationRequest.supportingInformation"/>
       <sliceName value="trimester"/>
-      <short value="Observation of gestational age by trimester"/>
+      <short value="GP NAPS data field: Trimester (pregnancy)"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -109,6 +113,7 @@
     </element>
     <element id="MedicationRequest.authoredOn">
       <path value="MedicationRequest.authoredOn"/>
+      <short value="GP NAPS data field: Date of visit"/>
       <min value="1"/>
       <condition value="gp-naps-medreq-01"/>
       <constraint>
@@ -123,6 +128,7 @@
     </element>
     <element id="MedicationRequest.requester">
       <path value="MedicationRequest.requester"/>
+      <short value="GP NAPS data field: Prescriber"/>
       <min value="1"/>
       <type>
         <code value="Reference"/>
@@ -132,6 +138,7 @@
     </element>
     <element id="MedicationRequest.reasonCode">
       <path value="MedicationRequest.reasonCode"/>
+      <short value="GP NAPS data field: Indication for Antimicrobial"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationRequest.dosageInstruction">
@@ -144,10 +151,12 @@
     </element>
     <element id="MedicationRequest.dosageInstruction.timing">
       <path value="MedicationRequest.dosageInstruction.timing"/>
+      <short value="GP NAPS data field: Frequency"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationRequest.dosageInstruction.route">
       <path value="MedicationRequest.dosageInstruction.route"/>
+      <short value="GP NAPS data field: Route"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationRequest.dosageInstruction.doseAndRate">
@@ -156,6 +165,7 @@
     </element>
      <element id="MedicationRequest.dosageInstruction.doseAndRate.doseQuantity">
       <path value="MedicationRequest.dosageInstruction.doseAndRate.doseQuantity"/>
+      <short value="GP NAPS data field: Dose and Dose unit"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationRequest.dispenseRequest">
@@ -164,10 +174,12 @@
     </element>
     <element id="MedicationRequest.dispenseRequest.validityPeriod">
       <path value="MedicationRequest.dispenseRequest.validityPeriod"/>
+      <short value="GP NAPS data field: Frequency"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationRequest.dispenseRequest.validityPeriod.start">
       <path value="MedicationRequest.dispenseRequest.validityPeriod.start"/>
+      <short value="GP NAPS data field: Date of prescription"/>
       <min value="1"/>
       <condition value="gp-naps-medreq-02"/>
       <constraint>
@@ -181,10 +193,12 @@
     </element>
     <element id="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
       <path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed"/>
+      <short value="GP NAPS data field: Repeats"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationRequest.dispenseRequest.quantity">
       <path value="MedicationRequest.dispenseRequest.quantity"/>
+      <short value="GP NAPS data field: Quantity"/>
       <mustSupport value="true"/>
     </element>
   </differential>

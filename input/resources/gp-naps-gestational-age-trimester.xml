@@ -63,6 +63,7 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]"/>
+      <short value="GP NAPS data field: Trimester (pregnancy)"/>
       <comment value="This is typically calculated using gestational age." />
       <type>
         <code value="CodeableConcept" />

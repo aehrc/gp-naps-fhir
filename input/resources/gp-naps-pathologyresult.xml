@@ -33,6 +33,7 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code"/>
+      <short value="GP NAPS data field: Microbiology collected test"/>
       <mustSupport value="true"/>
       <binding>
         <strength value="extensible" />
@@ -51,7 +52,7 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]"/>
-      <short value="Time of specimen collection"/>
+      <short value="GP NAPS data field: Microbiology date collected"/>
       <type>
         <code value="dateTime" />
       </type>
@@ -67,10 +68,12 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]"/>
+      <short value="GP NAPS data field: Microbiology collected result"/>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.specimen">
       <path value="Observation.specimen"/>
+      <short value="GP NAPS data field: Microbiology collected"/>
       <type>
         <code value="Reference"/>
         <targetProfile

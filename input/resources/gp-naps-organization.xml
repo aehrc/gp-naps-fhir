@@ -52,10 +52,12 @@
     </element>
     <element id="Organization.address.state">
       <path value="Organization.address.state"/>
+      <short value="GP NAPS data field: State/Territory"/>
       <min value="1"/>
     </element>
     <element id="Organization.address.postalCode">
       <path value="Organization.address.postalCode"/>
+      <short value="GP NAPS data field: Postcode"/>
       <min value="1"/>
       <condition value="inv-add-3"/>
       <constraint>

@@ -18,6 +18,7 @@
     <element id="MedicationStatement.extension:longTerm">
       <path value="MedicationStatement.extension" />
       <sliceName value="longTerm" />
+      <short value="GP NAPS data field: Long_Term"/>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
@@ -29,6 +30,7 @@
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept">
       <path value="MedicationStatement.medication[x]"/>
       <sliceName value="medicationCodeableConcept"/>
+      <short value="GP NAPS data field: Antimicrobial"/>
       <comment value="Derived from MedicationRequest.medication[x]:medicationCodeableConcept"/>
       <min value="1"/>
       <type>
@@ -56,12 +58,14 @@
     </element>
     <element id="MedicationStatement.effectivePeriod.start">
       <path value="MedicationStatement.effectivePeriod.start"/>
+      <short value="GP NAPS data field: Date of prescription"/>
       <comment value="Derived from MedicationRequest.dispenseRequest.validityPeriod.start"/>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationStatement.dateAsserted">
       <path value="MedicationStatement.dateAsserted"/>
+      <short value="GP NAPS data field: Date of visit"/>
       <comment value="Derived from MedicationRequest.authoredOn"/>
       <min value="1"/>
       <mustSupport value="true"/>
@@ -79,6 +83,7 @@
     </element>
     <element id="MedicationStatement.reasonCode">
       <path value="MedicationStatement.reasonCode"/>
+      <short value="GP NAPS data field: Indication for Antimicrobial"/>
       <comment value="Derived from MedicationRequest.reasonCode"/>
       <mustSupport value="true"/>
     </element>
@@ -93,10 +98,13 @@
     </element>
     <element id="MedicationStatement.dosage.timing">
       <path value="MedicationStatement.dosage.timing"/>
+      <short value="GP NAPS data field: Frequency"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationStatement.dosage.route">
       <path value="MedicationStatement.dosage.route"/>
+      <short value="GP NAPS data field: Route"/>
+      <mustSupport value="true"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationStatement.dosage.doseAndRate">
@@ -105,6 +113,7 @@
     </element>
      <element id="MedicationStatement.dosage.doseAndRate.doseQuantity">
       <path value="MedicationStatement.dosage.doseAndRate.doseQuantity"/>
+      <short value="GP NAPS data field: Dose and Dose unit"/>
       <mustSupport value="true"/>
     </element>
   </differential>

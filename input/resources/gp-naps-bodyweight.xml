@@ -70,7 +70,7 @@
     <element id="Observation.value[x]:valueQuantity">
       <path value="Observation.value[x]"/>
       <sliceName value="valueQuantity"/>
-      <short value="Body weight"/>
+      <short value="GP NAPS data field: Weight"/>
       <min value="1"/>
     </element>
     <element id="Observation.value[x]:valueQuantity.code">

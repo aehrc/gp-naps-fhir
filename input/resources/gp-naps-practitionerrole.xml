@@ -17,6 +17,7 @@
     </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization"/>
+      <short value="GP NAPS data field: GP Practice"/>
       <min value="1"/>
       <type>
         <code value="Reference"/>
@@ -26,6 +27,7 @@
     </element>
     <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty"/>
+      <short value="GP NAPS data field: Specialty"/>
       <mustSupport value="true"/>
     </element>
   </differential>

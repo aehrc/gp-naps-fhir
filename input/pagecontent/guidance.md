@@ -13,7 +13,7 @@ For guidance on constructing a complete FHIR data submission see the section [Co
 |---|----|---|---|
 |State/Territory|[GP NAPS Organization](StructureDefinition-gp-naps-organization.html)|Organization.address.state|
 |Postcode|[GP NAPS Organization](StructureDefinition-gp-naps-organization.html)|Organization.address.postalCode|
-|Biological Sex|MedicationRequest.extension:sexForClinicalUse|N/A|
+|Biological sex|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.extension:sexForClinicalUse|
 |Trimester (pregnancy)|[GP NAPS Gestational Age Trimester](StructureDefinition-gp-naps-gestational-age-trimester.html)|Observation.valueCodeableConcept|
 |Indigenous Status |[GP NAPS Patient](StructureDefinition-gp-naps-patient.html)|Patient.extension:indigenousStatus|
 |Prescription type|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.extension:scriptAuthorityType|
@@ -41,7 +41,7 @@ For guidance on constructing a complete FHIR data submission see the section [Co
 |Microbiology date collected|[GP NAPS Pathology Result](StructureDefinition-gp-naps-pathologyresult.html)|Observation.effectiveDateTime|
 |Microbiology collected test|[GP NAPS Pathology Result](StructureDefinition-gp-naps-pathologyresult.html)|Observation.code|
 |Microbiology collected result|[GP NAPS Pathology Result](StructureDefinition-gp-naps-pathologyresult.html)|Observation.value[x]|
-|smoking status |[GP NAPS Smoking Status](StructureDefinition-gp-naps-smokingstatus.html)|Observation.valueCodeableConcept|
+|Smoking status |[GP NAPS Smoking Status](StructureDefinition-gp-naps-Smokingstatus.html)|Observation.valueCodeableConcept|
 |Indication Documented|N/A|Generated as part of ingestion of data by NAPS if indication is present.|
 |Event_Id|N/A|Generated as part of ingestion of data by NAPS from either each MedicationRequest XOR each Encounter.|
 |General Practice Name|Not in scope of IG|Part of data access, privacy, and security.|
@@ -57,7 +57,7 @@ The table below provides guidance to developers implementing data export from a 
 |---|----|---|
 |State/Territory|Organization.address.state|N/A|
 |Postcode|Organization.address.postalCode|N/A|
-|Biological Sex|MedicationRequest.extension:sexForClinicalUse|N/A|
+|Biological sex|MedicationRequest.extension:sexForClinicalUse|N/A|
 |Trimester (pregnancy)|Observation.valueCodeableConcept|N/A|
 |Indigenous Status |Patient.extension:indigenousStatus|N/A|
 |Prescription type|MedicationRequest.extension:scriptAuthorityType|N/A|
@@ -86,7 +86,7 @@ The table below provides guidance to developers implementing data export from a 
 |Microbiology date collected|Observation.effectiveDateTime|Specimen.collection.collectedDateTime|
 |Microbiology collected test|Observation.code|N/A|
 |Microbiology collected result|Observation.value[x]|N/A|
-|smoking status |Observation.valueCodeableConcept|N/A|
+|Smoking status |Observation.valueCodeableConcept|N/A|
 {:.grid}
 
 ### Frequency (dose timing)
