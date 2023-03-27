@@ -15,7 +15,7 @@ For guidance on constructing a complete FHIR data submission see the section [Co
 |Postcode|[GP NAPS Organization](StructureDefinition-gp-naps-organization.html)|Organization.address.postalCode|
 |Biological sex|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.extension:sexForClinicalUse|
 |Trimester (pregnancy)|[GP NAPS Gestational Age Trimester](StructureDefinition-gp-naps-gestational-age-trimester.html)|Observation.valueCodeableConcept|
-|Indigenous Status |[GP NAPS Patient](StructureDefinition-gp-naps-patient.html)|Patient.extension:indigenousStatus|
+|Indigenous status |[GP NAPS Patient](StructureDefinition-gp-naps-patient.html)|Patient.extension:indigenousStatus|
 |Prescription type|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.extension:scriptAuthorityType|
 |Date of visit|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.authoredOn|
 |Date of prescription|[GP NAPS MedicationRequest](StructureDefinition-gp-naps-medicationrequest.html)|MedicationRequest.dispenseRequest.validityPeriod.start|
@@ -59,7 +59,7 @@ The table below provides guidance to developers implementing data export from a 
 |Postcode|Organization.address.postalCode|N/A|
 |Biological sex|MedicationRequest.extension:sexForClinicalUse|N/A|
 |Trimester (pregnancy)|Observation.valueCodeableConcept|N/A|
-|Indigenous Status |Patient.extension:indigenousStatus|N/A|
+|Indigenous status |Patient.extension:indigenousStatus|N/A|
 |Prescription type|MedicationRequest.extension:scriptAuthorityType|N/A|
 |Date of visit|MedicationRequest.authoredOn|Encounter.period.end and MedicationStatement.dateAsserted and Observation(Age).effectiveDateTime and Observation(Gestational Age Trimester).effectiveDateTime|
 |Date of prescription|MedicationRequest.dispenseRequest.validityPeriod.start|MedicationStatement.effectivePeriod.start|

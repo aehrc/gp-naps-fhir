@@ -18,7 +18,7 @@
     <element id="Patient.extension:indigenousStatus">
       <path value="Patient.extension"/>
       <sliceName value="indigenousStatus"/>
-      <short value="GP NAPS data field: Indigenous Status"/>
+      <short value="GP NAPS data field: Indigenous status"/>
       <mustSupport value="true"/>
     </element>
   </differential>

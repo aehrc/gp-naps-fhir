@@ -33,7 +33,7 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code"/>
-      <short value="GP NAPS data field: Microbiology collected test"/>
+      <short value="GP NAPS data field: Microbiology collected test or eGFR or CrCl"/>
       <mustSupport value="true"/>
       <binding>
         <strength value="extensible" />
@@ -68,7 +68,7 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]"/>
-      <short value="GP NAPS data field: Microbiology collected result"/>
+      <short value="GP NAPS data field: Microbiology collected result or eGFR result or CrCl result"/>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.specimen">

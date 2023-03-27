@@ -44,7 +44,7 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <short value="Date, and optionally time, the prescription was authored'"/>
+      <short value="GP NAPS data field: Date of visit"/>
       <definition value="Date, and optionally time, the prescription was authored, i.e. the patient is 'this age." />
       <min value="1" />
       <type>
