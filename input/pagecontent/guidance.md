@@ -41,7 +41,7 @@ For guidance on constructing a complete FHIR data submission see the section [Co
 |Microbiology date collected|[GP NAPS Pathology Result](StructureDefinition-gp-naps-pathologyresult.html)|Observation.effectiveDateTime|
 |Microbiology collected test|[GP NAPS Pathology Result](StructureDefinition-gp-naps-pathologyresult.html)|Observation.code|
 |Microbiology collected result|[GP NAPS Pathology Result](StructureDefinition-gp-naps-pathologyresult.html)|Observation.value[x]|
-|Smoking status |[GP NAPS Smoking Status](StructureDefinition-gp-naps-Smokingstatus.html)|Observation.valueCodeableConcept|
+|Smoking status |[GP NAPS Smoking Status](StructureDefinition-gp-naps-smokingstatus.html)|Observation.valueCodeableConcept|
 |Indication Documented|N/A|Generated as part of ingestion of data by NAPS if indication is present.|
 |Event_Id|N/A|Generated as part of ingestion of data by NAPS from either each MedicationRequest XOR each Encounter.|
 |General Practice Name|Not in scope of IG|Part of data access, privacy, and security.|

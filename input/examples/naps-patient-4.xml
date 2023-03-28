@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Patient xmlns="http://hl7.org/fhir">
-    <!-- only an id for grouping, no ethnicity information -->
-    <id value="naps-patient-4"/>
-    <meta>
-        <profile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-patient"/>
-    </meta>
-</Patient>
-        

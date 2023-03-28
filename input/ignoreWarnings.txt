@@ -21,8 +21,8 @@ ValueSet https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporti
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1 not found by validator
-ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/specimen-type-1 not found by validator
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1 not found by validator
 
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2 on element AllergyIntolerance.code could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1 on element AllergyIntolerance.reaction.substance could not be resolved
@@ -30,14 +30,17 @@ The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/clinical
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1 on element AllergyIntolerance.reaction.exposureRoute could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1 on element Encounter.type could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/service-type-1 on element Encounter.serviceType could not be resolved
-The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/separation-mTeode-1 on element Encounter.hospitalization.dischargeDisposition could not be resolved
-The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1 on element Medication.code.coding could not be resolved
-The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1 on element Medication.form could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1 on element MedicationRequest.medication[x].coding could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1 on element MedicationRequest.reasonCode could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1 on element MedicationRequest.substitution.reason could not be resolved
+The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1 on element MedicationRequest.dosageInstruction.route could not be resolved
+The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1 on element MedicationRequest.dosageInstruction.asNeeded[x] could not be resolved
+The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/body-site-1 on element MedicationRequest.dosageInstruction.site could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1 on element MedicationStatement.medication[x].coding could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1 on element MedicationStatement.reasonCode could not be resolved
+The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/body-site-1 on element MedicationStatement.dosage.site could not be resolved
+The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1 on element MedicationStatement.dosage.asNeeded[x] could not be resolved
+The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1 on element MedicationStatement.dosage.route could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1 on element Organization.type could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1 on element Patient.extension.value[x] could not be resolved
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-3 on element Patient.contact.relationship could not be resolved
