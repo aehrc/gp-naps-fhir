@@ -2,7 +2,7 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="naps.fhir.au.gp"/>
   <url value="https://www.naps.org.au/fhir/gp/ImplementationGuide/naps.fhir.au.gp"/>
-  <version value="0.1.0-preview"/>
+  <version value="0.1.1-draft"/>
   <name value="GPNAPS"/>
   <title value="General Practitioner National Antimicrobial Prescribing Survey (NAPS)"/>
   <status value="draft"/>
@@ -29,13 +29,14 @@
     <packageId value="hl7.fhir.au.base"/>
     <version value="current"/>
   </dependsOn>
-  <dependsOn id="hl7ext">
-    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
-    <packageId value="hl7.fhir.uv.extensions"/>
-    <version value="1.0.0"/>
-  </dependsOn>
   <definition>
     <!--PROFILES-->
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/patient-sexParameterForClinicalUse"/>
+      </reference>
+      <description value="Patient Sex Parameter For Clinical Use"/>
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/gp-naps-age"/>
@@ -121,9 +122,21 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
+    <resource>
+			<reference>
+				<reference value="CodeSystem/sex-parameter-for-clinical-use"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
 		<resource>
 			<reference>
 				<reference value="ValueSet/naps-age-units"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+    <resource>
+			<reference>
+				<reference value="ValueSet/sex-parameter-for-clinical-use"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
@@ -445,10 +458,17 @@
       <code value="path-expansion-params"/>
       <value value="../input/_resources/exp-params.json"/>
     </parameter>
-    <!-- if you need to include resources that do not use this ig canonical namespace. -->
-    <!--<parameter>
+    <parameter>
 			<code value="special-url"/>
-			<value value="http://terminology.hl7.org.au/ValueSet/service-provision-conditions"/>
-		</parameter>-->
+			<value value="http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"/>
+		</parameter>
+    <parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use"/>
+		</parameter>
+    <parameter>
+			<code value="special-url"/>
+			<value value="http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse"/>
+		</parameter>
   </definition>
 </ImplementationGuide>
