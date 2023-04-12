@@ -174,7 +174,6 @@
     </element>
     <element id="MedicationRequest.dispenseRequest.validityPeriod">
       <path value="MedicationRequest.dispenseRequest.validityPeriod"/>
-      <short value="GP NAPS data field: Frequency"/>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationRequest.dispenseRequest.validityPeriod.start">
