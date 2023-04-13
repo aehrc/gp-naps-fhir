@@ -23,8 +23,8 @@
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="11981000168107"/>
-            <display value="Bactrim"/>
+            <code value="21461011000036103"/>
+            <display value="trimethoprim + sulfamethoxazole"/>
         </coding>
     </code>
     <patient>
@@ -34,8 +34,8 @@
         <substance>
             <coding>
                 <system value="http://snomed.info/sct"/>
-                <code value="11981000168107"/>
-                <display value="Bactrim"/>
+                <code value="21461011000036103"/>
+                <display value="trimethoprim + sulfamethoxazole"/>
             </coding>
         </substance>
         <!-- Nature of Allergies -->

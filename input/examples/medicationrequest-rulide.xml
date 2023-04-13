@@ -54,10 +54,10 @@
     <reasonCode>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="36971009"/>
-            <display value="Sinusitis"/>
+            <code value="431231008"/>
+            <display value="Acute rhinosinusitis"/>
         </coding>
-        <text value="Sinusitis"/>
+        <text value="Acute rhinosinusitis"/>
     </reasonCode>
     <dosageInstruction>
         <text value="1 tab Twice a day before meals"/>
