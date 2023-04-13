@@ -31,7 +31,7 @@ For guidance on constructing a complete FHIR data submission see the section [Co
 |Allergies to Antimicrobial|[GP NAPS AllergyIntolerance](StructureDefinition-gp-naps-allergyintolerance.html)|AllergyIntolerance.code|
 |Nature of Allergies|[GP NAPS AllergyIntolerance](StructureDefinition-gp-naps-allergyintolerance.html)|AllergyIntolerance.reaction.manifestation|
 |Severity|[GP NAPS AllergyIntolerance](StructureDefinition-gp-naps-allergyintolerance.html)|AllergyIntolerance.reaction.severity|
-|Specialty|[GP NAPS PractitionerRole](StructureDefinition-gp-naps-practitionerrole.html)|PractitionerRole.specialty|
+|Specialty|[GP NAPS PractitionerRole](StructureDefinition-gp-naps-practitionerrole.html)|PractitionerRole.code|
 |Age|[GP NAPS Age](StructureDefinition-gp-naps-age.html)|Observation.valueQuantity.value|
 |AgeUnit|[GP NAPS Age](StructureDefinition-gp-naps-age.html)|Observation.valueQuantity.unit|
 |Weight|[GP NAPS Body Weight](StructureDefinition-gp-naps-bodyweight.html)|Observation.valueQuantity|
@@ -76,7 +76,7 @@ The table below provides guidance to developers implementing data export from a 
 |Allergies to Antimicrobial|AllergyIntolerance.code|AllergyIntolerance.reaction.substance|
 |Nature of Allergies|AllergyIntolerance.reaction.manifestation|N/A|
 |Severity|AllergyIntolerance.reaction.severity|N/A|
-|Specialty|PractitionerRole.specialty|N/A|
+|Specialty|PractitionerRole.code|N/A|
 |Age|Observation.valueQuantity.value|N/A|
 |AgeUnit|Observation.valueQuantity.unit|N/A|
 |Weight|Observation.valueQuantity|N/A|

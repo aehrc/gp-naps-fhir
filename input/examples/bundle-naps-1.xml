@@ -112,9 +112,9 @@
                     <reference value="urn:uuid:fc3a8c62-1b01-4971-8e46-5c5fdd1c6082"/>
                 </organization>
                 <!-- Specialty -->
-                <specialty>
+                <code>
                     <text value="General Practitioner"/>
-                </specialty>
+                </code>
             </PractitionerRole>
         </resource>
     </entry>

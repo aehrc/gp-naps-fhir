@@ -89,6 +89,14 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="MedicationRequest.encounter">
+      <path value="MedicationRequest.encounter"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://www.naps.org.au/fhir/gp/StructureDefinition/gp-naps-encounter"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MedicationRequest.supportingInformation:age">
       <path value="MedicationRequest.supportingInformation"/>
       <sliceName value="age"/>

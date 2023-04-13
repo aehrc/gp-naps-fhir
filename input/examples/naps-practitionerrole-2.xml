@@ -15,8 +15,8 @@
         <reference value="Organization/naps-organization-1"/>
     </organization>
     <!-- Specialty -->
-    <specialty>
-        <text value="Aged care"/>
-    </specialty>
+    <code>
+        <text value="Registered nurse"/>
+    </code>
 </PractitionerRole>
         

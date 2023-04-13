@@ -25,9 +25,10 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="PractitionerRole.specialty">
-      <path value="PractitionerRole.specialty"/>
+    <element id="PractitionerRole.code">
+      <path value="PractitionerRole.code"/>
       <short value="GP NAPS data field: Specialty"/>
+      <max value="1"/>
       <mustSupport value="true"/>
     </element>
   </differential>

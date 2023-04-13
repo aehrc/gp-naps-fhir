@@ -8,12 +8,12 @@
         <reference value="Organization/naps-organization-2"/>
     </organization>
     <!-- Specialty -->
-    <specialty>
+    <code>
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="394593009"/>
         </coding>
-        <text value="Oncology"/>
-    </specialty>
+        <text value="Oncologist"/>
+    </code>
 </PractitionerRole>
         
