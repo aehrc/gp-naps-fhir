@@ -25,9 +25,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationRequest.extension:sexForClinicalUse">
+    <element id="MedicationRequest.extension:sexParameterForClinicalUse">
       <path value="MedicationRequest.extension"/>
-      <sliceName value="sexForClinicalUse"/>
+      <sliceName value="sexParameterForClinicalUse"/>
       <short value="GP NAPS data field: Biological sex"/>
       <max value="1"/>
       <type>

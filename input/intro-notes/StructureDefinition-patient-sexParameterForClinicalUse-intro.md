@@ -1,0 +1,1 @@
+<p class="stu-note">This content is under discussion wit HL7 International and HL7 Australia and may be removed or changed during a later phase of an implementation project for GP NAPS.</p>
