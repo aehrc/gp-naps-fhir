@@ -9,6 +9,7 @@ The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced
 
 # Ignore warnings due to unavailable terminology server
 Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1' is unknown so the code cannot be validated
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1 not found by validator
