@@ -206,7 +206,7 @@ This table shows the relationship between the codes provided as part of the core
 ~~~
 
 <p>
-These codes SHALL be understood as having the formal meanings documented in this table. Note that <code>BID</code>, etc. are defined as 'at institutionally specified times'.
+These codes **SHALL** be understood as having the formal meanings documented in this table. Note that <code>BID</code>, etc. are defined as 'at institutionally specified times'.
 For example, an institution may choose that <code>BID</code> is "always at 7am and 6pm".  If it is inappropriate for this choice to be made, the code <code>BID</code> should not be used. Instead, a distinct organisation-specific code is used in place of the HL7-defined <code>BID</code> code and/or a structured representation should be used (in this case, <code>timeOfDay</code>).
 </p>
 
@@ -256,3 +256,60 @@ In this implementation guide to support example resources demonstrating the clin
     ~~~
 
 These identifiers do not implement data security and privacy controls, the GP NAPS system may implement a different approach.
+
+### Conformance and Must Support
+
+FHIR defines the notion of [Must Support](http://hl7.org/fhir/R4/conformance-rules.html#mustSupport) to help establish conformance expectations for systems. The specific meaning of "Must Support" is required to be defined in individual implementation guides. 
+
+For the purposes of this implementation guide, "Must Support" is defined in principle against a data specification it does not define the obligations for operations. To implement GP NAPS the definition of must support **SHALL** be extended as part of specifying the API by either:
+- extending this specification to include the API definition with CapabilityStatements and must support obligations, or
+- defining a separate API specification that points to this GP NAPS FHIR implementation guide
+
+In principle, the system actors are defined as:
+
+
+<table class="list">
+  <thead>
+    <tr>
+      <th>System actor</th>
+      <th>Description</th>
+      <th>Obligation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GP data submission</td>
+      <td>An application that submits a GP NAPS data submission set. This may be the application that generates the data submission set.</td>
+      <td><b>SHALL</b> be capable of sending the data element.</td>
+    </tr>
+    <tr>
+      <td>Data receipt</td>
+      <td>An application that receives and processes a GP NAPS data submission set. This may be the application that persists data.</td>
+      <td><b>SHALL</b> be capable of receiving and processing the data element for storage.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+See recommended guidance on must support in [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/must-support.html).
+
+#### Generating the submission set of data
+
+A GP NAPS data submission is composed of a set of resources. This set of resources may be submitted in Bulk Data Export format (ndjson), or Bundle, or some other format, as defined by the API for GP NAPS.
+
+The GP NAPS data submission **SHALL** contain:
+- one and only one Organization resource that represents the GP from which this data set is submitted
+- a Patient resource for each patient in the data set
+- a MedicationRequest for each prescription in the data set
+- an Age Observation resource for each prescription in the data set
+- a PractitionerRole for each prescriber in the data set (each prescription must have a prescriber)
+
+The GP NAPS data submission **MAY** contain, if available:
+- a MedicationStatement for each prescription, if and only if information on long term usage is available
+- a Trimester Observation for each prescription
+- an AllergyIntolerance for each statement of each patient's allergy
+- a Body Weight resource for each patient that is the latest body weight at the time of data submission
+- a Smoking Status resource for each patient that is the latest smoking status at the time of data submission
+- an AllergyIntolerance for each statement of each patient's allergy
+- a Pathology Result Observation for each ordered test or set of results for a patient at the time of data submission  
+- a Specimen for each Pathology Result, if and only if specimen type information is available
