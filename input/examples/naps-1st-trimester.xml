@@ -9,7 +9,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="57036006"/>
-            <display value="Finding of length of gestation"/>
+            <display value="Length of gestation"/>
         </coding>
     </code>
     <subject>
