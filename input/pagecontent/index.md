@@ -17,7 +17,10 @@ This guide does not cover:
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
 - [Home](index.html): This page provides the introduction and scope for this guide.
-- [Guidance](guidance.html): This page provides guidance on mapping GP NAPS data elements to FHIR element.
+- [Guidance](guidance.html): This set of pages lists the guidance for this guide.
+  - [General Guidance](general-guidance.html) This page provides guidance on mapping GP NAPS data elements to FHIR element.
+  - [Comparison with GP system capabilities](comparison-gp-systems.html): This page provides TBD.
+  - [Comparison with other prescribing specifications](comparison-specs.html): This page compares the GP NAPS requirements to other national prescribing specification.
 - [FHIR Artefacts](artifacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This set of pages describes the profiles and extensions that are defined in this guide to support GP NAPS data elements using FHIR. Each profile page includes a narrative description and formal definition. 
   - [Terminology](terminology.html): This set of pages lists the value sets and code systems defined in this guide.

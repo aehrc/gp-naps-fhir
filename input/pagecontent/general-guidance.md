@@ -6,7 +6,7 @@ The table below identifies the element that is the primary match for that field 
 A complete FHIR data submission will include the source system value in each element it applies to, for example:
 - 'Date of visit' is primarily matched to MedicationRequest.authoredOn, but if the resources are included, it will also be included in Encounter.period.end, MedicationStatement.dateAsserted, Observation(Age).effectiveDateTime and Observation(Gestational Age Trimester).effectiveDateTime.
 
-For guidance on constructing a complete FHIR data submission see the section [Complete FHIR data submission](guidance.html#complete-fhir-data-submission).
+For guidance on constructing a complete FHIR data submission see the section [Complete FHIR data submission](general-guidance.html#complete-fhir-data-submission).
 
 |GP NAPs data field|GP NAPS Profile|Primary FHIR element|
 |---|----|---|---|
