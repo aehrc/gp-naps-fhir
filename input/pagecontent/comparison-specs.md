@@ -1,3 +1,5 @@
+This page provides an overview of how the GP NAPS specification relates to other prescribing specifications in Australia.
+
 The following table summarises the data requirements of GP NAPS and which requirements are present in the data requirements for prescribing for a Real Time Prescription Monitoring system and an Electronic Prescribing system.
 
 <table border="1" cellspacing="0" cellpadding="0" width="609">
