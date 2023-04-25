@@ -1,6 +1,6 @@
 This page provides an overview of how the GP NAPS specification relates to other prescribing specifications in Australia.
 
-The following table summarises the data requirements of GP NAPS and which requirements are present in the data requirements for prescribing for a Real Time Prescription Monitoring system and an Electronic Prescribing system.
+The following table summarises the data requirements of GP NAPS and which requirements are present in the data requirements for a Real Time Prescription Monitoring (RTPM) system and an Electronic Prescribing (ETP)system.
 
 <table border="1" cellspacing="0" cellpadding="0" width="609">
     <tbody>
@@ -12,12 +12,12 @@ The following table summarises the data requirements of GP NAPS and which requir
             </td>
             <td width="170" valign="top">
                 <p>
-                    <strong>RTPM data requirement</strong>
+                    <strong>RTPM data requirement*</strong>
                 </p>
             </td>
             <td width="151" valign="top">
                 <p>
-                    <strong>ETP data requirement</strong>
+                    <strong>ETP data requirement*</strong>
                 </p>
             </td>
         </tr>
@@ -605,3 +605,5 @@ The following table summarises the data requirements of GP NAPS and which requir
         </tr>
     </tbody>
 </table>
+
+\* _The data requirements for RTPM and ETP contain additional data elements that are not part of the GP NAPS data set._
