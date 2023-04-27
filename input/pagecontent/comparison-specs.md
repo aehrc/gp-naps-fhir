@@ -1,6 +1,6 @@
 This page compares the [GP NAPS data requirements](https://build.fhir.org/ig/aehrc/gp-naps-fhir/general-guidance.html#gp-naps-data-submission) to the data requirements of other national prescribing specifications in Australia.
 
-The comparison table summarises which GP NAPS data requirements are also a requirement for a Real Time Prescription Monitoring (RTPM) system and an Electronic Prescribing (ETP)system.
+The comparison table summarises which GP NAPS data requirements are also a requirement for a Real Time Prescription Monitoring (RTPM) system and an Electronic Prescribing (ETP) system.
 
 **Table: Key to symbols**
 

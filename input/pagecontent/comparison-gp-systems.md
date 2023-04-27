@@ -77,7 +77,7 @@ Overall, the systems assessed appeared to support the majority of data requireme
 </table>
 
 
-**Table: Level of support for GP NAPS Data Requirements Support in GP Systems Assessed** 
+**Table: Level of support for GP NAPS Data Requirements in GP Systems Assessed** 
 
 <table border="1" cellspacing="0" cellpadding="0" width="680">
     <tbody>
