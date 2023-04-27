@@ -107,7 +107,7 @@ The following table summarises the data requirements of GP NAPS and which requir
         <tr>
             <td width="174" valign="top">
                 <p>
-                    Biological sex
+                    Biological sex**
                 </p>
             </td>
             <td width="170" valign="top">
@@ -124,7 +124,7 @@ The following table summarises the data requirements of GP NAPS and which requir
         <tr>
             <td width="174" valign="top">
                 <p>
-                    Age
+                    Age**
                 </p>
             </td>
             <td width="170" valign="top">
@@ -141,7 +141,7 @@ The following table summarises the data requirements of GP NAPS and which requir
         <tr>
             <td width="174" valign="top">
                 <p>
-                    AgeUnit
+                    AgeUnit**
                 </p>
             </td>
             <td width="170" valign="top">
@@ -607,3 +607,5 @@ The following table summarises the data requirements of GP NAPS and which requir
 </table>
 
 \* _The data requirements for RTPM and ETP contain additional data elements that are not part of the GP NAPS data set._
+
+\** _Minimal processing required to map or derive a suitable value._
