@@ -1,6 +1,64 @@
-This page provides an overview of how the GP NAPS specification relates to other prescribing specifications in Australia.
+This page compares the [GP NAPS data requirements](https://build.fhir.org/ig/aehrc/gp-naps-fhir/general-guidance.html#gp-naps-data-submission) to the data requirements of other national prescribing specifications in Australia.
 
-The following table summarises the data requirements of GP NAPS and which requirements are present in the data requirements for a Real Time Prescription Monitoring (RTPM) system and an Electronic Prescribing (ETP)system.
+The comparison table summarises which GP NAPS data requirements are also a requirement for a Real Time Prescription Monitoring (RTPM) system and an Electronic Prescribing (ETP)system.
+
+**Table: Key to symbols**
+
+<table border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td width="90" valign="top">
+                <p>
+                    <strong>Symbol</strong>
+                </p>
+            </td>
+            <td width="436" valign="top">
+                <p>
+                    <strong>Description</strong>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="90" valign="top">
+                <p>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                </p>
+            </td>
+            <td width="436" valign="top">
+                <p>
+                    Similar data requirement; minimal additional processing to add GP NAPS data export
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="90" valign="top">
+                <p>
+                    <img src="tick-maybe.png"/>
+                </p>
+            </td>
+            <td width="436" valign="top">
+                <p>
+                    Different but related data requirement; data may not match or significant additional processing to add GP NAPS data export
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="90" valign="top">
+                <p>
+                    <img src="https://hl7.org/fhir/R4/assets/images/cross.png"/>
+                </p>
+            </td>
+            <td width="436" valign="top">
+                <p>
+                    Data not required
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+**Table: Comparison of GP NAPS Data Requirements to National Prescribing Specifications** 
 
 <table border="1" cellspacing="0" cellpadding="0" width="609">
     <tbody>
@@ -112,12 +170,12 @@ The following table summarises the data requirements of GP NAPS and which requir
             </td>
             <td width="170" valign="top">
                 <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                    <img src="tick-maybe.png"/>
                 </p>
             </td>
             <td width="151" valign="top">
                 <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                    <img src="tick-maybe.png"/>
                 </p>
             </td>
         </tr>
@@ -467,6 +525,28 @@ The following table summarises the data requirements of GP NAPS and which requir
         <tr>
             <td width="113" valign="top">
                 <p>
+                    Smoking status
+                </p>
+            </td>
+            <td width="174" valign="top">
+                <p>
+                    Smoking status
+                </p>
+            </td>
+            <td width="170" valign="top">
+                <p>
+                    <img src="https://hl7.org/fhir/R4/assets/images/cross.png"/>
+                </p>
+            </td>
+            <td width="151" valign="top">
+                <p>
+                    <img src="https://hl7.org/fhir/R4/assets/images/cross.png"/>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="113" valign="top">
+                <p>
                     eGFR
                 </p>
             </td>
@@ -581,31 +661,7 @@ The following table summarises the data requirements of GP NAPS and which requir
                 </p>
             </td>
         </tr>
-        <tr>
-            <td width="113" valign="top">
-                <p>
-                    Smoking status
-                </p>
-            </td>
-            <td width="174" valign="top">
-                <p>
-                    Smoking status
-                </p>
-            </td>
-            <td width="170" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/cross.png"/>
-                </p>
-            </td>
-            <td width="151" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/cross.png"/>
-                </p>
-            </td>
-        </tr>
     </tbody>
 </table>
 
 \* _The data requirements for RTPM and ETP contain additional data elements that are not part of the GP NAPS data set._
-
-\** _Minimal processing required to map or derive a suitable value._

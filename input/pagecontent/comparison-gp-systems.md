@@ -20,12 +20,13 @@ There is uniform support for many of the data requirements, such as "Antimicrobi
 
 Overall, the systems assessed appeared to support the majority of data requirements. Support may be broadened through additional processing of data for export, however, it is noted that support may already exist with capability not assessable in a UI. There was only a single data point in one system that did not appear to be supported.
 
-**Table 1 Key:** Describes how the symbols in Table 2 should be interpreted.
+
+**Table: Key to symbols**
 
 <table border="1" cellspacing="0" cellpadding="0">
     <tbody>
         <tr>
-            <td width="94" valign="top">
+            <td width="90" valign="top">
                 <p>
                     <strong>Symbol</strong>
                 </p>
@@ -37,7 +38,7 @@ Overall, the systems assessed appeared to support the majority of data requireme
             </td>
         </tr>
         <tr>
-            <td width="94" valign="top">
+            <td width="90" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
@@ -49,7 +50,7 @@ Overall, the systems assessed appeared to support the majority of data requireme
             </td>
         </tr>
         <tr>
-            <td width="94" valign="top">
+            <td width="90" valign="top">
                 <p>
                     <img src="tick-maybe.png"/>
                 </p>
@@ -61,7 +62,7 @@ Overall, the systems assessed appeared to support the majority of data requireme
             </td>
         </tr>
         <tr>
-            <td width="94" valign="top">
+            <td width="90" valign="top">
                 <p>
                     <img src="https://hl7.org/fhir/R4/assets/images/cross.png"/>
                 </p>
@@ -76,7 +77,7 @@ Overall, the systems assessed appeared to support the majority of data requireme
 </table>
 
 
-**Table 2 GP NAPS Requirements Support in GP Systems:** Summarises the data requirements of GP NAPS and indicates the level of support observed in each GP system assessed.
+**Table: Level of support for GP NAPS Data Requirements Support in GP Systems Assessed** 
 
 <table border="1" cellspacing="0" cellpadding="0" width="680">
     <tbody>

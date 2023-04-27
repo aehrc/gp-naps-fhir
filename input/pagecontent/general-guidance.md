@@ -8,6 +8,8 @@ A complete FHIR data submission will include the source system value in each ele
 
 For guidance on constructing a complete FHIR data submission see the section [Complete FHIR data submission](general-guidance.html#complete-fhir-data-submission).
 
+**Table: Primary GP NAPS Data Requirement Mapping to FHIR**
+
 |GP NAPs data field|GP NAPS Profile|Primary FHIR element|
 |---|----|---|---|
 |State/Territory|[GP NAPS Organization](StructureDefinition-gp-naps-organization.html)|Organization.address.state|
@@ -52,6 +54,8 @@ For guidance on constructing a complete FHIR data submission see the section [Co
 ### Complete FHIR data submission
 The table below provides guidance to developers implementing data export from a general practice system in forming the GP NAPS data submission.
 
+**Table: Complete GP NAPS Data Requirement Mapping to FHIR**
+
 |GP NAPs data field|Primary FHIR element|Derived FHIR element|
 |---|----|---|
 |State/Territory|Organization.address.state|N/A|
@@ -95,6 +99,7 @@ GP NAPS data submission export is recommended to structure dose timing, and conv
 
 This table summarises some common uses of the [Timing](http://hl7.org/fhir/R4/datatypes.html#timing) Data Type criteria.
 
+**Table: Common uses of the Timing Data Type Criteria**
 
 <table class="grid">
  <tr><td><b>description</b></td> <td><b>duration</b></td> <td><b>durationUnit</b></td> <td><b>frequency</b></td> <td><b>frequencyMax</b></td> <td><b>period</b></td> <td><b>periodUnit</b></td> <td><b>periodMax</b></td> <td><b>Day of Week</b></td> <td><b>Time Of Day</b></td> <td><b>when</b></td> <td><b>offset</b></td>  <td><b>bounds[x]</b></td>  <td><b>count</b></td></tr>
@@ -175,10 +180,12 @@ Note, though, that some systems include timing details in something like 'Dosage
 #### Timing as code 
 Other systems use a set of 'common' codes - including, but usually not limited to, 
 widely understood acronyms such as "BID". If a <code>Timing.code</code> is provided, the code is understood to be a complete statement of whatever is specified in the structured timing data (except for <code>Timing.repeat.bounds</code>, which applies to the code), and either the code or the data may be used to interpret the <code>Timing</code>. A structured timing specification SHOULD be provided whenever possible, unless the code is BID, TID, QID, AM or PM, which have a ubiquitous meaning.
-</p>
-<p>
+
+
 This table shows the relationship between the codes provided as part of the core FHIR specification, and the structured data portions of the Timing type:
-</p>
+
+**Table: Relationship between Codes and Structured Parts of Timing Data Type**
+
 <table class="grid">
  <tr><td><b>description</b></td> <td><b>duration</b></td> <td><b>durationUnit</b></td> <td><b>frequency</b></td> <td><b>frequencyMax</b></td> <td><b>period</b></td> <td><b>periodUnit</b></td> <td><b>periodMax</b></td> <td><b>when</b></td> <td><b>bounds[x]</b></td></tr>
  <tr><td>QOD</td>                <td></td>                <td></td>                     <td>1</td>                <td></td>                    <td>2</td>             <td>d</td>                  <td></td>                 <td></td>            <td></td></tr>
