@@ -1,16 +1,16 @@
-This page provides a summary of an analysis performed that compared the GP NAPS data requirements with the possible support that GP clinical systems could provide. The overall tabular summary can be seen below.
+This page provides a summary of an analysis performed that compared the [GP NAPS data requirement](https://build.fhir.org/ig/aehrc/gp-naps-fhir/general-guidance.html#gp-naps-data-submission) with the possible support that GP clinical systems could provide. A tabular summary can be seen below.
 
-Analysis was performed by assessing three leading GP systems using [Training simulators](https://www.digitalhealth.gov.au/healthcare-providers/initiatives-and-programs/my-health-record#training-simulators) provided by the [Australian Digital Health Agency](https://www.digitalhealth.gov.au/). The GP NAPS data requirements were compared against the user interface (UI), including data fields and other visual components, of the GP systems and observations were made as to the level of support that would be likley.
+Analysis was performed by assessing three leading GP systems using [Training simulators](https://www.digitalhealth.gov.au/healthcare-providers/initiatives-and-programs/my-health-record#training-simulators) provided by the [Australian Digital Health Agency](https://www.digitalhealth.gov.au/). The GP NAPS data requirements were compared against the user interface (UI), including data fields and other visual components, of the GP systems. Observations were made as to the level of support that would be likley.
 
 Consideration was given to the data field names, the context within the system workflow including surrounding fields, the perceived data types in the UI and the values that were possible to record against a particular field. For example, the specific values, the semantic type of possible values and the granularity of those values.
 
 The analysis was limited to what could be observed from a UI perspective and the GP system environments being used. Those environments did not necessarily have all features accessible and had limited test data. This most impacted the assessment of pathology results information. Previous pathology results were not found and therefore, could not be assessed. Requested pathology was available but this did not correlate with the data requirement. An additional limitation noted is the fields and data types observed in the UI do not necessarily correlate with data stored by the system.
 
-There was a strong level of support for many of the items, with ubiquitous support observed for key pieces of data such as "Antimicrobial", "Indication" for Antimicrobial and "Allergies to Antimicrobial". There were several data requirements where the level of possible support was difficult to assess given the variability in the way the data is recorded and aligned to the requirements as specified. For example, it was observed that dosage instructions data did not correlate with the discrete fields prescribed by the data requirements. Sometimes data was present as part of another data item (e.g. dose unit contained in medication) and others were concatenated together to form a string of instructions (e.g. dose + frequency + route). For these items, it may be possible to derive the discrete components but it is anticipated it would require significant additional processing. 
+There was a strong level of support for many of the items, with ubiquitous support observed for key pieces of data such as "Antimicrobial", "Indication for Antimicrobial" and "Allergies to Antimicrobial". There were several data requirements where the level of possible support was difficult to assess given the variability in the way the data is recorded and aligned to the requirements as specified. For example, it was observed that dosage instructions data did not correlate with the discrete fields prescribed by the data requirements. Sometimes data was present as part of another data item (e.g. dose unit contained in medication) and others were concatenated together to form a string of instructions (e.g. dose + frequency + route). For these items, it may be possible to derive the discrete components but it is anticipated it would require significant additional processing. 
 
-It appears as though a large proportion of the data requirements could be met, however, it would require varing levels of processing to meet each one. 
+Overall, the systems assessed appeared to be able to support a significant number of the data requirements. That support could be broadened by varying efforts to process the data recorded into a form suitable to meet the requirements. There were only two data points observed that did not appear to be supported in any way by all three systems: "Biological Sex" and "Severity" (Allergies).
 
-**Table 1: Key:** Describes how the symbols in Table 2 should be interpreted.
+**Table 1 Key:** Describes how the symbols in Table 2 should be interpreted.
 
 <table border="1" cellspacing="0" cellpadding="0">
     <tbody>
@@ -83,7 +83,7 @@ It appears as though a large proportion of the data requirements could be met, h
 </table>
 
 
-**Table 2: GP NAPS Requirement Support in GP Systems:** Summarises the data requirements of GP NAPS and indicates the level of support observed in each GP system assessed.
+**Table 2 GP NAPS Requirement Support in GP Systems:** Summarises the data requirements of GP NAPS and indicates the level of support observed in each GP system assessed.
 
 <table border="1" cellspacing="0" cellpadding="0" width="680">
     <tbody>
