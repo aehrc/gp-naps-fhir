@@ -1,14 +1,24 @@
-This page provides a summary of an analysis performed that compared the [GP NAPS data requirement](https://build.fhir.org/ig/aehrc/gp-naps-fhir/general-guidance.html#gp-naps-data-submission) with the possible support that GP clinical systems could provide. A tabular summary can be seen below.
+### Overview
 
-Analysis was performed by assessing three leading GP systems using [Training simulators](https://www.digitalhealth.gov.au/healthcare-providers/initiatives-and-programs/my-health-record#training-simulators) provided by the [Australian Digital Health Agency](https://www.digitalhealth.gov.au/). The GP NAPS data requirements were compared against the user interface (UI), including data fields and other visual components, of the GP systems. Observations were made as to the level of support that would be likley.
+This page compares the [GP NAPS data requirements](https://build.fhir.org/ig/aehrc/gp-naps-fhir/general-guidance.html#gp-naps-data-submission) with three leading Australian GP systems. The GP systems were assessed using [Training simulators](https://www.digitalhealth.gov.au/healthcare-providers/initiatives-and-programs/my-health-record#training-simulators) provided by the [Australian Digital Health Agency](https://www.digitalhealth.gov.au/).
 
-Consideration was given to the data field names, the context within the system workflow including surrounding fields, the perceived data types in the UI and the values that were possible to record against a particular field. For example, the specific values, the semantic type of possible values and the granularity of those values.
+The data requirements were compared against the systems' user interface (UI) with consideration given to data field names, context within the system workflow including surrounding fields, the perceived data types in the UI and the values that were possible to record against a particular field. Based on the information that could be input, an assessment was made as to the ease at which data could be exported to meet the requirements.
 
-The analysis was limited to what could be observed from a UI perspective and the GP system environments being used. Those environments did not necessarily have all features accessible and had limited test data. This most impacted the assessment of pathology results information. Previous pathology results were not found and therefore, could not be assessed. Requested pathology was available but this did not correlate with the data requirement. An additional limitation noted is the fields and data types observed in the UI do not necessarily correlate with data stored by the system.
+A summary of findings is presented in the tables below.
 
-There was a strong level of support for many of the items, with ubiquitous support observed for key pieces of data such as "Antimicrobial", "Indication for Antimicrobial" and "Allergies to Antimicrobial". There were several data requirements where the level of possible support was difficult to assess given the variability in the way the data is recorded and aligned to the requirements as specified. For example, it was observed that dosage instructions data did not correlate with the discrete fields prescribed by the data requirements. Sometimes data was present as part of another data item (e.g. dose unit contained in medication) and others were concatenated together to form a string of instructions (e.g. dose + frequency + route). For these items, it may be possible to derive the discrete components but it is anticipated it would require significant additional processing. 
+### Limitations
 
-Overall, the systems assessed appeared to be able to support a significant number of the data requirements. That support could be broadened by varying efforts to process the data recorded into a form suitable to meet the requirements. There were only two data points observed that did not appear to be supported in any way by all three systems: "Biological Sex" and "Severity" (Allergies).
+Limitations were noted due to the approach taken for this analysis. They are as follows:
+
+* Not all features are accessible in the training simulators and may not reflect production environments.
+* Data could be entered, but existing data is limited to the test data present in the training simulators. This most impacted the assessment of pathology results information. 
+* Fields and data types observed in a UI do not necessarily correlate with data stored by a system. 
+
+### Findings
+
+There is uniform support for many of the data requirements, such as "Antimicrobial", "Indication for Antimicrobial" and "Allergies to Antimicrobial". For others, there is variability in the way data is recorded and therefore, variability is expected in the data that might be exported to meet the requirements. For example, it was observed that dosage instructions data does not always correlate with discrete fields. Sometimes information is present as part of another data item (e.g. dose unit contained in medication) and others were concatenated together to form a string of instructions (e.g. dose + frequency + route). For these items, it may be possible to derive the discrete components but it is anticipated it would require significant additional processing.
+
+Overall, the systems assessed appeared to support the majority of data requirements. Support may be broadened through additional processing of data for export, however, it is noted that support may already exist with capability not assessable in a UI. There was only a single data point in one system that did not appear to be supported.
 
 **Table 1 Key:** Describes how the symbols in Table 2 should be interpreted.
 
@@ -34,9 +44,7 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="436" valign="top">
                 <p>
-                    Either a field is present that directly correlates with the
-                    requirement or it is anticipated the value might be derived
-                    with minimal additional processing.
+                    Minimal additional processing is expected to be needed to export the data specified
                 </p>
             </td>
         </tr>
@@ -48,9 +56,7 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="436" valign="top">
                 <p>
-                    There is similar data captured but either a direct correlation was difficult to determine or
-                    it is anticipated significant additional processing may be required to meet
-                    the requirement.
+                    Significant additional processing may be required to export the data specified
                 </p>
             </td>
         </tr>
@@ -62,20 +68,7 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="436" valign="top">
                 <p>
-                    There is no obvious support for this requirement.
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td width="94" valign="top">
-                <p>
-                    <img src="question.png"/>
-                </p>
-            </td>
-            <td width="436" valign="top">
-                <p>
-                    The requirement was not assessable due to limitations in
-                    the system simulator.
+                    No obvious support
                 </p>
             </td>
         </tr>
@@ -83,7 +76,7 @@ Overall, the systems assessed appeared to be able to support a significant numbe
 </table>
 
 
-**Table 2 GP NAPS Requirement Support in GP Systems:** Summarises the data requirements of GP NAPS and indicates the level of support observed in each GP system assessed.
+**Table 2 GP NAPS Requirements Support in GP Systems:** Summarises the data requirements of GP NAPS and indicates the level of support observed in each GP system assessed.
 
 <table border="1" cellspacing="0" cellpadding="0" width="680">
     <tbody>
@@ -227,12 +220,12 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/cross.png"/>
+                    <img src="tick-maybe.png"/>
                 </p>
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/cross.png"/>
+                    <img src="tick-maybe.png"/>
                 </p>
             </td>
         </tr>
@@ -395,7 +388,7 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="tick-maybe.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
@@ -407,17 +400,17 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="tick-maybe.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="tick-maybe.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="tick-maybe.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
@@ -451,7 +444,7 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="tick-maybe.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
             <td width="142" valign="top">
@@ -461,7 +454,7 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="tick-maybe.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
@@ -473,7 +466,7 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="tick-maybe.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
             <td width="142" valign="top">
@@ -619,7 +612,7 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="tick-maybe.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
             <td width="142" valign="top">
@@ -685,6 +678,33 @@ Overall, the systems assessed appeared to be able to support a significant numbe
         <tr>
             <td width="132" valign="top">
                 <p>
+                    Smoking status
+                </p>
+            </td>
+            <td width="161" valign="top">
+                <p>
+                    Smoking status
+                </p>
+            </td>
+            <td width="142" valign="top">
+                <p>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                </p>
+            </td>
+            <td width="142" valign="top">
+                <p>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                </p>
+            </td>
+            <td width="142" valign="top">
+                <p>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="132" valign="top">
+                <p>
                     eGFR
                 </p>
             </td>
@@ -722,17 +742,17 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
+                    *
                 </p>
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
+                    *
                 </p>
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
+                    *
                 </p>
             </td>
         </tr>
@@ -749,17 +769,17 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
+                    *
                 </p>
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
+                    *
                 </p>
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
+                    *
                 </p>
             </td>
         </tr>
@@ -771,17 +791,17 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
+                    *
                 </p>
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
+                    *
                 </p>
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
+                    *
                 </p>
             </td>
         </tr>
@@ -793,17 +813,17 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
+                    *
                 </p>
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
+                    *
                 </p>
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
+                    *
                 </p>
             </td>
         </tr>
@@ -815,47 +835,21 @@ Overall, the systems assessed appeared to be able to support a significant numbe
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
+                    *
                 </p>
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
+                    *
                 </p>
             </td>
             <td width="142" valign="top">
                 <p>
-                    <img src="question.png"/>
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td width="132" valign="top">
-                <p>
-                    Smoking status
-                </p>
-            </td>
-            <td width="161" valign="top">
-                <p>
-                    Smoking status
-                </p>
-            </td>
-            <td width="142" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-            <td width="142" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
-                </p>
-            </td>
-            <td width="142" valign="top">
-                <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
+                    *
                 </p>
             </td>
         </tr>
     </tbody>
 </table>
 
+\* _Data requirement was not able to be assessed. Previous pathology results were not found in the test data and could not be created as this would typically come from a pathology provider. Requesting pathology was able to be entered but this does not correlate with the data requirement._
