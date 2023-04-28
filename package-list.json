@@ -17,6 +17,13 @@
       "path": "https://build.fhir.org/ig/aehrc/gp-naps-fhir/branches/2023Mar",
       "status": "qa-preview",
       "fhirversion": "4.0.1"
+    },
+    {
+      "version": "0.1.1-preview",
+      "desc": "QA Preview for review by National Centre for Antimicrobial Stewardship (NCAS)",
+      "path": "https://build.fhir.org/ig/aehrc/gp-naps-fhir/branches/2023Apr",
+      "status": "qa-preview",
+      "fhirversion": "4.0.1"
     }
   ]
 }
