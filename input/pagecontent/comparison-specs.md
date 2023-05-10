@@ -97,7 +97,7 @@ The comparison table summarises which GP NAPS data requirements are also a requi
             </td>
             <td width="151" valign="top">
                 <p>
-                    <img src="https://hl7.org/fhir/R4/assets/images/cross.png"/>
+                    <img src="https://hl7.org/fhir/R4/assets/images/tick.png"/>
                 </p>
             </td>
         </tr>
@@ -165,7 +165,7 @@ The comparison table summarises which GP NAPS data requirements are also a requi
         <tr>
             <td width="174" valign="top">
                 <p>
-                    Biological sex**
+                    Biological sex
                 </p>
             </td>
             <td width="170" valign="top">
@@ -182,7 +182,7 @@ The comparison table summarises which GP NAPS data requirements are also a requi
         <tr>
             <td width="174" valign="top">
                 <p>
-                    Age**
+                    Age
                 </p>
             </td>
             <td width="170" valign="top">
@@ -199,7 +199,7 @@ The comparison table summarises which GP NAPS data requirements are also a requi
         <tr>
             <td width="174" valign="top">
                 <p>
-                    AgeUnit**
+                    AgeUnit
                 </p>
             </td>
             <td width="170" valign="top">
@@ -664,4 +664,4 @@ The comparison table summarises which GP NAPS data requirements are also a requi
     </tbody>
 </table>
 
-\* _The data requirements for RTPM and ETP contain additional data elements that are not part of the GP NAPS data set._
+\* _The data requirements for RTPM and ETP contain additional data elements that are not part of the GP NAPS data set. Some ETP requirements are defeind at jurisidction level and do not apply across the whole of Australia._
