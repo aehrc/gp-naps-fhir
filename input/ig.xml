@@ -2,7 +2,7 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="naps.fhir.au.gp"/>
   <url value="https://www.naps.org.au/fhir/gp/ImplementationGuide/naps.fhir.au.gp"/>
-  <version value="0.1.1-draft"/>
+  <version value="0.2.0-draft"/>
   <name value="GPNAPS"/>
   <title value="General Practitioner National Antimicrobial Prescribing Survey (NAPS)"/>
   <status value="draft"/>
@@ -427,7 +427,7 @@
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
       <code value="releaselabel"/>
-      <value value="CI Build"/>
+      <value value="draft"/>
     </parameter>
     <parameter>
       <code value="path-resource"/>
